@@ -5,29 +5,28 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-nav a.brand-logo {
+.navbar-fixed nav {
+    background-color: #2e2e2e;
+}
+.navbar-fixed nav .nav-wrapper {
+    margin-left: 8.5em;
+    margin-right: 8.5em;
+}
+.navbar-fixed nav .nav-wrapper a.brand-logo {
     padding: .1em !important;
 }
-.brand-logo img {
-    height: 1.5em;
+.navbar-fixed nav .nav-wrapper a.brand-logo img {
+    height: 1em;
     margin-top: 0;
     margin-bottom: 0;
-    margin: .17em;
+    margin: .4em;
     float: left;
 }
-.brand-logo p {
+.navbar-fixed nav .nav-wrapper a.brand-logo p {
     float: left;
     margin-top: 0;
     margin-bottom: 0;
     font-family: 'Overpass Mono';
-}
-
-nav {
-    background-color: #2e2e2e;
-}
-.nav-wrapper {
-    margin-left: 8.5em;
-    margin-right: 8.5em;
 }
 
 #banner {
