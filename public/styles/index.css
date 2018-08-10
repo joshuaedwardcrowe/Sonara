@@ -1,0 +1,94 @@
+body {
+    background-color: #e5e5e5;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+nav a.brand-logo {
+    padding: .1em !important;
+}
+.brand-logo img {
+    height: 1.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin: .17em;
+    float: left;
+}
+.brand-logo p {
+    float: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Overpass Mono';
+}
+
+nav {
+    background-color: #2e2e2e;
+}
+.nav-wrapper {
+    margin-left: 8.5em;
+    margin-right: 8.5em;
+}
+
+#banner {
+    background-image: url(../images/banner-2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 15em;
+    opacity: 0.6
+}
+
+.tabs .tab a {
+    color: white;
+    font-family: 'Fira Mono';
+}
+.tabs .tab a.active {
+    color: white;
+}
+.tabs .tab a:hover {
+    color: #e5e5e5;
+}
+.indicator {
+    background-color: white !important;
+}
+#page-topshelf {
+    border-bottom: 4px solid rgba(0,0,0,0.5);
+    margin-bottom: 0px !important;
+}
+
+.module-header {
+    padding-bottom: 0.5em;
+    border-bottom: 1.5px solid white;
+}
+
+.collection-item.avatar {
+    min-height: 0 !important;
+}
+
+#recent-activity .module-container .collection,
+#recent-broadcasts .module-container .card-collection {
+    height: 69.5vh;
+    padding-right: 0.2em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 0;
+}
+ /* width */
+.scrollable::-webkit-scrollbar {
+    width: 2px;
+}
+
+/* Track */
+.scrollable::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+.scrollable::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+/* Handle on hover */
+.scrollable::-webkit-scrollbar-thumb:hover {
+    background: #555;
+} 
