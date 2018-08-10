@@ -3,12 +3,12 @@
         <nav>
             <div class="nav-wrapper">
                 <a href="#!" class="brand-logo">
-                    <img src="images/headphones.png" />
+                    <img src="./images/headphones.png" />
                     <p>Sonara</p>
                 </a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a><i class="material-icons left">notifications</i>11</a></li>
-                    <li><a><i class="material-icons left">signal_cellular_4_bar</i>Connected</a></li>
+                    <li><a><i class="material-icons left">notifications</i>{{notificationCount}}</a></li>
+                    <li><a><i class="material-icons left">{{connectionIcon}}</i>{{connectionStatus}}</a></li>
                     <li><a id="menu"><i class="material-icons right">menu</i></a></li>
                 </ul>
             </div>
@@ -16,8 +16,19 @@
     </div>
 </template>
 
-<script>
+<script type="text/javascript">
     module.exports = {
-      name: 'HeaderBar'
+      name: 'HeaderBar',
+      template: '#header-bar',
+      props: ['notificationCount', 'connectionStatus'],
+      computed: {
+        connectionIcon: function () {
+          switch (this.connectionStatus) {
+            case 'Connected': return 'signal_cellular_4_bar';
+            case 'Problematic': return 'signal_cellular_connected_no_internet_4_bar';
+            default: return 'signal_cellular_null';
+          }
+        }
+      }
     }
 </script>
