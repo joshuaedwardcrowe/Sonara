@@ -1,7 +1,14 @@
-const Vue = require('vue');
+const Vue = require('vue/dist/vue.js');
+const Vuegister = require('vuegister');
 
-const squadronApp = new Vue({
-    el: '#squadron-app'
+// Handles single-file component registry
+Vuegister.register();
+
+const HeaderBar = require('./components/HeaderBar.vue');
+
+window.SonaraApp = new Vue({
+  el: '#sonara-app',
+  components: {HeaderBar}
 });
 
 function getChildElementByClassName($parentElement, childClassName) {
@@ -13,7 +20,7 @@ function establishMenuAndSideNav(menuId, sideNavId, options) {
   const $menuTrigger = document.getElementById(menuId);
   const $menu = document.getElementById(sideNavId);
   const SideNav = M.Sidenav.init($menu, options)
-  
+
   $menuTrigger.onclick = function (clickEvent) {
     return SideNav.isOpen ? SideNav.close() : SideNav.open();
   }
@@ -24,9 +31,9 @@ function establishOverviewTabs(tabsContainerId, options) {
   const $tabsList = getChildElementByClassName($tabsContainer, 'tabs')
   const tabItemsCollection = $tabsList.getElementsByClassName('tab')
   const tabItems = [].slice.call(tabItemsCollection)
-  
+
   tabItems.forEach($tabItem => $tabItem.onclick = (e) => e.preventDefault())
-  
+
   const Tabs = M.Tabs.init($tabsList, options)
   Tabs.select(tabItems[0].id)
   Tabs.updateTabIndicator();
@@ -38,11 +45,11 @@ function establishStatusButton(buttonId, options) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  
+
   establishMenuAndSideNav('menu', 'slide-out', {edge: 'right', draggable: true})
   establishOverviewTabs('page-topshelf', {})
   establishStatusButton('status', {})
-    
+
   console.log("Loaded.")
 
 });
