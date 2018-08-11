@@ -9,7 +9,6 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a><i class="material-icons left">notifications</i>{{notificationCount}}</a></li>
                     <li><a><i class="material-icons left">{{connectionIcon}}</i>{{connectionStatus}}</a></li>
-                    <li><a id="menu"><i class="material-icons right">menu</i></a></li>
                 </ul>
             </div>
         </nav>

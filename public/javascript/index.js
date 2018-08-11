@@ -16,16 +16,6 @@ function getChildElementByClassName($parentElement, childClassName) {
   return $childElementPossibilities[0];
 }
 
-function establishMenuAndSideNav(menuId, sideNavId, options) {
-  const $menuTrigger = document.getElementById(menuId);
-  const $menu = document.getElementById(sideNavId);
-  const SideNav = M.Sidenav.init($menu, options)
-
-  $menuTrigger.onclick = function (clickEvent) {
-    return SideNav.isOpen ? SideNav.close() : SideNav.open();
-  }
-}
-
 function establishOverviewTabs(tabsContainerId, options) {
   const $tabsContainer = document.getElementById(tabsContainerId)
   const $tabsList = getChildElementByClassName($tabsContainer, 'tabs')
@@ -46,7 +36,6 @@ function establishStatusButton(buttonId, options) {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  establishMenuAndSideNav('menu', 'slide-out', {edge: 'right', draggable: true})
   establishOverviewTabs('page-topshelf', {})
   establishStatusButton('status', {})
 
