@@ -5,10 +5,11 @@ const Vuegister = require('vuegister');
 Vuegister.register();
 
 const HeaderBar = require('./components/HeaderBar.vue');
+const Page = require('./components/Page.vue');
 
 window.SonaraApp = new Vue({
   el: '#sonara-app',
-  components: {HeaderBar}
+  components: {HeaderBar, Page}
 });
 
 function getChildElementByClassName($parentElement, childClassName) {
