@@ -7,7 +7,7 @@
                     <p>Sonara</p>
                 </a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a><i class="material-icons left">notifications</i>{{notificationCount}}</a></li>
+                    <li><a><i class="material-icons left">assignment_ind</i>{{peopleCount}}</a></li>
                     <li><a><i class="material-icons left">{{connectionIcon}}</i>{{connectionStatus}}</a></li>
                 </ul>
             </div>
@@ -19,7 +19,7 @@
     module.exports = {
       name: 'HeaderBar',
       template: '#header-bar',
-      props: ['notificationCount', 'connectionStatus'],
+      props: ['peopleCount', 'connectionStatus'],
       computed: {
         connectionIcon: function () {
           switch (this.connectionStatus) {
