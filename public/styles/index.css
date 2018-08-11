@@ -29,13 +29,15 @@ body::-webkit-scrollbar {
     font-family: 'Overpass Mono';
 }
 
-#banner {
-    background-image: url(../images/banner-2.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 15em;
-    opacity: 0.6
+#page-content {
+    padding-top: 2em;
 }
+#user .collection {
+    border: 0 !important;
+}
+
+
+
 
 .tabs .tab a {
     color: white;
