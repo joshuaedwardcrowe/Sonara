@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd25d4ec-a1e2-4fa3-8735-f5951d3fbf0e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/components/PageQueueController.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/components/PageQueueControllerNotification.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/components/PageQueue.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/components/PageQueue.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/styles/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/components/PageQueueController.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/components/PageQueueProfile.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/components/PageQueueControllerNotification.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/components/PageQueueProfileNotification.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -58,10 +57,12 @@
     <session id="1895659952">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -83,7 +84,7 @@
           <entry key="css" value="95" />
           <entry key="html" value="304" />
           <entry key="js" value="470" />
-          <entry key="vue" value="3240" />
+          <entry key="vue" value="4145" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -91,7 +92,7 @@
           <entry key="CSS" value="95" />
           <entry key="HTML" value="304" />
           <entry key="JavaScript" value="470" />
-          <entry key="Vue.js" value="3240" />
+          <entry key="Vue.js" value="4145" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -107,26 +108,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/components/PageQueue.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+            <state relative-caret-position="414">
+              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/components/PageQueueController.vue">
+        <entry file="file://$PROJECT_DIR$/public/components/PageQueueProfile.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+            <state relative-caret-position="575">
+              <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/components/PageQueueControllerNotification.vue">
+        <entry file="file://$PROJECT_DIR$/public/components/PageQueueProfileNotification.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+            <state relative-caret-position="506">
+              <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -143,8 +144,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/styles/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+            <state relative-caret-position="276">
+              <caret line="69" column="55" lean-forward="true" selection-start-line="69" selection-start-column="55" selection-end-line="69" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -164,6 +165,7 @@
     <findStrings>
       <find>user</find>
       <find>/span&gt;</find>
+      <find>Page</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -188,10 +190,12 @@
         <option value="$PROJECT_DIR$/public/components/Page.vue" />
         <option value="$PROJECT_DIR$/public/components/PageHistory.vue" />
         <option value="$PROJECT_DIR$/public/components/PageDevice.vue" />
-        <option value="$PROJECT_DIR$/public/components/PageQueue.vue" />
         <option value="$PROJECT_DIR$/public/styles/index.css" />
         <option value="$PROJECT_DIR$/public/components/PageQueueControllerNotification.vue" />
         <option value="$PROJECT_DIR$/public/components/PageQueueController.vue" />
+        <option value="$PROJECT_DIR$/public/components/PageQueue.vue" />
+        <option value="$PROJECT_DIR$/public/components/PageQueueProfileNotification.vue" />
+        <option value="$PROJECT_DIR$/public/components/PageQueueProfile.vue" />
       </list>
     </option>
   </component>
@@ -209,7 +213,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1010" />
@@ -300,11 +304,13 @@
       <workItem from="1533928075063" duration="2310000" />
       <workItem from="1533934701060" duration="7369000" />
       <workItem from="1533976372030" duration="6193000" />
+      <workItem from="1534065116777" duration="428000" />
+      <workItem from="1534065723537" duration="960000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18906000" />
+    <option name="totallyTimeSpent" value="20294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -419,31 +425,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/styles/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/components/PageQueue.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        <state relative-caret-position="414">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/components/PageQueueControllerNotification.vue">
+    <entry file="file://$PROJECT_DIR$/public/styles/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state relative-caret-position="276">
+          <caret line="69" column="55" lean-forward="true" selection-start-line="69" selection-start-column="55" selection-end-line="69" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/components/PageQueueController.vue">
+    <entry file="file://$PROJECT_DIR$/public/components/PageQueueProfileNotification.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+        <state relative-caret-position="506">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/components/PageQueueProfile.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
         </state>
       </provider>
     </entry>

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col s4">
-                <page-queue-controller></page-queue-controller>
+                <page-queue-profile image-url="./images/background.jpg" name="John Smith"></page-queue-profile>
             </div>
             <div class="col s8">RIGHT COLUMN</div>
         </div>
@@ -10,10 +10,10 @@
 </template>
 
 <script>
-  const PageQueueController = require('./PageQueueController');
+  const PageQueueProfile = require('./PageQueueProfile');
 
   module.exports = {
     template: '#page-queue-template',
-    components: {PageQueueController}
+    components: {PageQueueProfile}
   }
 </script>
