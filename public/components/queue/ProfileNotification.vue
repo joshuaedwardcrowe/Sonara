@@ -1,4 +1,4 @@
-<template id="page-queue-profile-notification-template">
+<template id="profile-notification">
     <li class="collection-item avatar">
         <img v-bind:src="imgUrl" alt="" class="circle">
         <span class="title">{{title}}</span>
@@ -8,14 +8,14 @@
                 <br /> {{specifics}}
             </span>
         </p>
-        <a href="#!" class="secondary-content"><i class="material-icons grey-text">arrow_forward</i></a>
+        <a href="#!" class="secondary-content"><i class="material-icons grey-text">{{icon}}</i></a>
     </li>
 </template>
 
 <script>
     module.exports = {
-      template: '#page-queue-profile-notification-template',
-      props: ['imgUrl', 'title', 'description', 'specifics'],
+      template: '#profile-notification',
+      props: ['imgUrl', 'icon', 'title', 'description', 'specifics'],
       computed: {
         secondLine: function () { return !!this.specifics }
       }

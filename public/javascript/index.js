@@ -8,10 +8,20 @@ const Header = require('./components/layout/Header.vue');
 const Page = require('./components/layout/Page.vue');
 const PagePanel = require('./components/layout/PagePanel.vue');
 const Profile = require('./components/queue/Profile.vue');
+const ProfileUser = require('./components/queue/ProfileUser.vue');
+const ProfileNotification = require('./components/queue/ProfileNotification.vue');
 
 window.SonaraApp = new Vue({
   el: '#sonara-app',
-  components: {Header, Page, PagePanel, Profile}
+  components: {Header, Page, PagePanel, Profile, ProfileUser, ProfileNotification},
+  data: {
+    currentUser: {
+      avatarUrl: './images/person.png',
+      name: 'John Smith',
+      points: 2000
+    },
+    notifications: []
+  }
 });
 
 function getChildElementByClassName($parentElement, childClassName) {

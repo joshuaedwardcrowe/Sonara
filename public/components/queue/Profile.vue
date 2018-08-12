@@ -1,13 +1,8 @@
 <template id="profile-template">
-    <div id="`user`">
-        <div class="card grey darken-3">
-            <div class="card-image">
-                <img v-bind:src="imageUrl">
-                <span class="card-title">{{name}}</span>
-            </div>
-        </div>
+    <div id="user">
+        <slot name="user"></slot>
         <ul class="collection scrollable">
-            NOTIFICATIONS GO HERE
+            <slot name="notifications"></slot>
         </ul>
     </div>
 </template>
@@ -15,9 +10,6 @@
 <script>
     module.exports = {
       template: '#profile-template',
-      props: ['imageUrl', 'name'],
-      mounted: function () {
-        console.log(`Image URL is: ${this.imageUrl}`);
-      }
+      props: ['avatarUrl', 'backgroundUrl', 'name']
     }
 </script>

@@ -22,8 +22,17 @@
               v-bind:right-column-size="8">
         <profile
                 slot="leftColumnContent"
-                image-url="images/background.jpg"
+                avatar-url="images/person.jpg"
+                background-url="images/background.jpg"
                 name="John Smith">
+          <profile-user
+                  slot="user"
+                  v-bind:user="currentUser">
+          </profile-user>
+          <profile-notification
+                  slot="notifications"
+                  v-for="notification in notifications">
+          </profile-notification>
         </profile>
       </page-panel>
     </page>

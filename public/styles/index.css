@@ -62,7 +62,7 @@ body::-webkit-scrollbar {
     border-bottom: 1.5px solid white;
 }
 
-.collection-item.avatar {
+.collection .collection-item.avatar {
     min-height: 0 !important;
 }
 
@@ -93,3 +93,7 @@ body::-webkit-scrollbar {
 .scrollable::-webkit-scrollbar-thumb:hover {
     background: #555;
 } 
+
+#user hr {
+    border: 1px solid white;
+}
