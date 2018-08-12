@@ -17,9 +17,14 @@
       <span slot="panelOneName">Test</span>
       <page-panel
               slot="panelOneContent"
-              multiple-columns="true"
-              left-column-size="4"
-              right-column-size="8">
+              v-bind:multiple-columns="true"
+              v-bind:left-column-size="4"
+              v-bind:right-column-size="8">
+        <profile
+                slot="leftColumnContent"
+                image-url="images/background.jpg"
+                name="John Smith">
+        </profile>
       </page-panel>
     </page>
   </div>

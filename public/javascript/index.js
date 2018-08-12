@@ -6,11 +6,12 @@ Vuegister.register();
 
 const Header = require('./components/layout/Header.vue');
 const Page = require('./components/layout/Page.vue');
-const PagePanel = require('./components/layout/PagePanel');
+const PagePanel = require('./components/layout/PagePanel.vue');
+const Profile = require('./components/queue/Profile.vue');
 
 window.SonaraApp = new Vue({
   el: '#sonara-app',
-  components: {Header, Page, PagePanel}
+  components: {Header, Page, PagePanel, Profile}
 });
 
 function getChildElementByClassName($parentElement, childClassName) {

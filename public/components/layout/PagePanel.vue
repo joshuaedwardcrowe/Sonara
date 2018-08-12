@@ -1,9 +1,8 @@
-<template id="page-queue-template">
+<template id="page-panel-template">
     <div class="container">
         <div class="row">
             <div v-bind:class="leftColumn" v-if="multipleColumns">
                 <slot name="leftColumnContent"></slot>
-                LEFT COLUMN
             </div>
             <div v-bind:class="rightColumn" v-if="multipleColumns">
                 <slot name="rightColumnContent"></slot>
@@ -19,7 +18,7 @@
 
 <script>
   module.exports = {
-    template: '#page-queue-template',
+    template: '#page-panel-template',
     props: {
       multipleColumns: {
         type: Boolean,
