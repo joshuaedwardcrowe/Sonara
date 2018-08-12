@@ -1,4 +1,4 @@
-<template id="header-bar">
+<template id="header">
     <div class="navbar-fixed grey darken-4">
         <nav>
             <div class="nav-wrapper">
@@ -17,8 +17,8 @@
 
 <script type="text/javascript">
     module.exports = {
-      name: 'HeaderBar',
-      template: '#header-bar',
+      name: 'Header',
+      template: '#header',
       props: ['peopleCount', 'connectionStatus'],
       computed: {
         connectionIcon: function () {
