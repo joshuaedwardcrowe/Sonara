@@ -12,9 +12,16 @@
 
 <body class="grey darken-4">
   <div id="sonara-app">
-    <header-bar people-count="11" connection-status="Connected"></header-bar>
-
-    <page></page>
+    <header people-count="11" connection-status="Connected"></header>
+    <page>
+      <span slot="panelOneName">Test</span>
+      <page-panel
+              slot="panelOneContent"
+              multiple-columns="true"
+              left-column-size="4"
+              right-column-size="8">
+      </page-panel>
+    </page>
   </div>
 
 

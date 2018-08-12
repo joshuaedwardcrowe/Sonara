@@ -4,12 +4,13 @@ const Vuegister = require('vuegister');
 // Handles single-file component registry
 Vuegister.register();
 
-const HeaderBar = require('./components/HeaderBar.vue');
-const Page = require('./components/Page.vue');
+const Header = require('./components/layout/Header.vue');
+const Page = require('./components/layout/Page.vue');
+const PagePanel = require('./components/layout/PagePanel');
 
 window.SonaraApp = new Vue({
   el: '#sonara-app',
-  components: {HeaderBar, Page}
+  components: {Header, Page, PagePanel}
 });
 
 function getChildElementByClassName($parentElement, childClassName) {
