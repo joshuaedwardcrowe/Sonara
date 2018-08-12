@@ -20,7 +20,29 @@ window.SonaraApp = new Vue({
       name: 'John Smith',
       points: 2000
     },
-    notifications: []
+    currentNotifications: [
+      {
+        id: 1,
+        icon: 'arrow_forward',
+        description: 'Rewarded 20 Points',
+        user: {
+          avatarUrl: './images/person.png',
+          name: 'John Smith',
+          points: 2000
+        }
+      },
+      {
+        id: 2,
+        icon: 'arrow_forward',
+        description: 'Played a Song',
+        specifics: 'The Shadows - Foot Tapper',
+        user: {
+          avatarUrl: './images/person.png',
+          name: 'John Smith',
+          points: 2000
+        }
+      }
+    ]
   }
 });
 

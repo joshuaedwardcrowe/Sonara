@@ -97,3 +97,10 @@ body::-webkit-scrollbar {
 #user hr {
     border: 1px solid white;
 }
+#user .collection .collection-item {
+    border: 1px solid white;
+    margin: .2em;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 3px;
+}

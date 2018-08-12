@@ -31,7 +31,9 @@
           </profile-user>
           <profile-notification
                   slot="notifications"
-                  v-for="notification in notifications">
+                  v-for="currentNotification in currentNotifications"
+                  v-bind:key="currentNotification.id"
+                  v-bind:notification="currentNotification">
           </profile-notification>
         </profile>
       </page-panel>
