@@ -98,9 +98,22 @@ body::-webkit-scrollbar {
     border: 1px solid white;
 }
 #user .collection .collection-item {
-    border: 1px solid white;
     margin: .2em;
     margin-left: 0;
     margin-right: 0;
-    border-radius: 3px;
+}
+
+
+.queue-item img {
+    height: 75px;
+}
+.queue-item .card-content {
+    padding: 20px;
+}
+.queue-item .card-content .progress {
+    margin: 0;
+    margin-top: 15px;
+}
+.queue-item .card-content a.btn-floating {
+    float: right;
 }

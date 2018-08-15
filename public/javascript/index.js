@@ -10,10 +10,15 @@ const PagePanel = require('./components/layout/PagePanel.vue');
 const Profile = require('./components/queue/Profile.vue');
 const ProfileUser = require('./components/queue/ProfileUser.vue');
 const ProfileNotification = require('./components/queue/ProfileNotification.vue');
+const Queued = require('./components/queue/Queued.vue');
 
 window.SonaraApp = new Vue({
   el: '#sonara-app',
-  components: {Header, Page, PagePanel, Profile, ProfileUser, ProfileNotification},
+  components: {
+    Header, Page, PagePanel,
+    Profile, ProfileUser, ProfileNotification,
+    Queued
+  },
   data: {
     currentUser: {
       avatarUrl: './images/person.png',
