@@ -1,15 +1,15 @@
-<template id="queued-template">
+<template id="song-template">
     <div class="card horizontal queue-item">
         <div class="card-image">
-            <img v-bind:src="track.albumCover">
+            <img v-bind:src="song.albumCover">
         </div>
         <div class="card-stacked">
             <div class="card-content">
                 <p>
-                    {{track.artist}} - <strong>{{track.name}}</strong>
+                    {{song.artist}} - <strong>{{song.name}}</strong>
                     <span class="right">
                         <i class="material-icons right">clear</i>
-                        {{track.rating.likes}} Like | {{track.rating.dislikes}} Dislike
+                        {{song.rating.likes}} Like | {{song.rating.dislikes}} Dislike
                     </span>
                 </p>
                 <div class="progress grey">
@@ -22,11 +22,14 @@
 
 <script>
     module.exports = {
-      template: '#queued-template',
-      props: {track: Object},
+      template: '#song-template',
+      props: {song: Object},
+      mounted: function () {
+        console.log(`Song: ${this.song}`)
+      },
       computed: {
         progressStyle: function () {
-          return `width: ${this.track.progress}%`;
+          return `width: ${this.song.progress}%`;
         }
       }
     }

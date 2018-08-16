@@ -10,14 +10,14 @@ const PagePanel = require('./components/layout/PagePanel.vue');
 const Profile = require('./components/queue/Profile.vue');
 const ProfileUser = require('./components/queue/ProfileUser.vue');
 const ProfileNotification = require('./components/queue/ProfileNotification.vue');
-const Queued = require('./components/queue/Queued.vue');
+const Song = require('./components/queue/Song.vue');
 
 window.SonaraApp = new Vue({
   el: '#sonara-app',
   components: {
     Header, Page, PagePanel,
     Profile, ProfileUser, ProfileNotification,
-    Queued
+    Song
   },
   data: {
     currentUser: {
@@ -48,7 +48,7 @@ window.SonaraApp = new Vue({
         }
       }
     ],
-    currentTracks: [
+    currentSongs: [
       {
         id: 1,
         artist: 'Drake',

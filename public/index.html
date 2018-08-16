@@ -36,12 +36,12 @@
                   v-bind:notification="currentNotification">
           </profile-notification>
         </profile>
-        <queued
+        <song
                 slot="rightColumnContent"
-                v-for="currentTrack in currentTracks"
-                v-bind="currentTrack.id"
-                v-bind:track="currentTrack">
-        </queued>
+                v-for="currentSong in currentSongs"
+                v-bind:key="currentSong.id"
+                v-bind:song="currentSong">
+        </song>
       </page-panel>
     </page>
   </div>
