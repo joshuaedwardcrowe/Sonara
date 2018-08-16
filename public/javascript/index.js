@@ -93,14 +93,19 @@ function getChildElementByClassName($parentElement, childClassName) {
 
 function establishOverviewTabs(tabsContainerId, options) {
   const $tabsContainer = document.getElementById(tabsContainerId)
-  const $tabsList = getChildElementByClassName($tabsContainer, 'tabs')
-  const tabItemsCollection = $tabsList.getElementsByClassName('tab')
-  const tabItems = [].slice.call(tabItemsCollection)
+  const $tabsList = getChildElementByClassName($tabsContainer, 'tabs');
+  const tabItemsCollection = $tabsList.getElementsByClassName('tab');
+  const tabItems = [].slice.call(tabItemsCollection);
+  const tabAnchorsCollection = $tabsList.getElementsByTagName('a');
+  const tabAnchors = [].slice.call(tabAnchorsCollection);
 
-  tabItems.forEach($tabItem => $tabItem.onclick = (e) => e.preventDefault())
+  tabItems.forEach($tabItem => $tabItem.onclick = (e) => e.preventDefault());
 
-  const Tabs = M.Tabs.init($tabsList, options)
-  Tabs.select(tabItems[0].id)
+  window.Tabs = M.Tabs.init($tabsList, options);
+  const Reference = tabAnchors[1].href;
+  const Id = Reference.substring(Reference.indexOf("#") + 1, Reference.length);
+
+  Tabs.select(Id);
   Tabs.updateTabIndicator();
 }
 

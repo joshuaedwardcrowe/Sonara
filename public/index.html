@@ -14,7 +14,7 @@
   <div id="sonara-app">
     <bar people-count="11" connection-status="Connected"></bar>
     <page>
-      <span slot="panelOneName">Test</span>
+      <span slot="panelOneName">Queue</span>
       <page-panel
               slot="panelOneContent"
               v-bind:multiple-columns="true"
@@ -38,6 +38,15 @@
         </profile>
         <song
                 slot="rightColumnContent"
+                v-for="currentSong in currentSongs"
+                v-bind:key="currentSong.id"
+                v-bind:song="currentSong">
+        </song>
+      </page-panel>
+      <span slot="panelTwoName">Charts</span>
+      <page-panel slot="panelTwoContent">
+        <song
+                slot="singleColumnContent"
                 v-for="currentSong in currentSongs"
                 v-bind:key="currentSong.id"
                 v-bind:song="currentSong">
