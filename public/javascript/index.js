@@ -4,7 +4,7 @@ const Vuegister = require('vuegister');
 // Handles single-file component registry
 Vuegister.register();
 
-const Header = require('./components/layout/Header.vue');
+const Bar = require('./components/layout/Bar.vue');
 const Page = require('./components/layout/Page.vue');
 const PagePanel = require('./components/layout/PagePanel.vue');
 const Profile = require('./components/queue/Profile.vue');
@@ -15,7 +15,7 @@ const Song = require('./components/queue/Song.vue');
 window.SonaraApp = new Vue({
   el: '#sonara-app',
   components: {
-    Header, Page, PagePanel,
+    Bar, Page, PagePanel,
     Profile, ProfileUser, ProfileNotification,
     Song
   },
