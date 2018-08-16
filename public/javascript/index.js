@@ -11,13 +11,16 @@ const Profile = require('./components/queue/Profile.vue');
 const ProfileUser = require('./components/queue/ProfileUser.vue');
 const ProfileNotification = require('./components/queue/ProfileNotification.vue');
 const Song = require('./components/queue/Song.vue');
+const IntegrationList = require('./components/integrations/IntegrationList.vue');
+const Integration = require('./components/integrations/Integration.vue');
 
 window.SonaraApp = new Vue({
   el: '#sonara-app',
   components: {
     Bar, Page, PagePanel,
     Profile, ProfileUser, ProfileNotification,
-    Song
+    Song,
+    IntegrationList, Integration
   },
   data: {
     currentUser: {
@@ -102,7 +105,7 @@ function establishOverviewTabs(tabsContainerId, options) {
   tabItems.forEach($tabItem => $tabItem.onclick = (e) => e.preventDefault());
 
   window.Tabs = M.Tabs.init($tabsList, options);
-  const Reference = tabAnchors[1].href;
+  const Reference = tabAnchors[2].href;
   const Id = Reference.substring(Reference.indexOf("#") + 1, Reference.length);
 
   Tabs.select(Id);
