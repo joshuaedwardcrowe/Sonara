@@ -117,3 +117,7 @@ body::-webkit-scrollbar {
 .queue-item .card-content a.btn-floating {
     float: right;
 }
+
+.tabs .tab i {
+    margin-top: 0.5em;
+}
