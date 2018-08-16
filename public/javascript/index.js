@@ -4,12 +4,86 @@ const Vuegister = require('vuegister');
 // Handles single-file component registry
 Vuegister.register();
 
-const HeaderBar = require('./components/HeaderBar.vue');
-const Page = require('./components/Page.vue');
+const Header = require('./components/layout/Header.vue');
+const Page = require('./components/layout/Page.vue');
+const PagePanel = require('./components/layout/PagePanel.vue');
+const Profile = require('./components/queue/Profile.vue');
+const ProfileUser = require('./components/queue/ProfileUser.vue');
+const ProfileNotification = require('./components/queue/ProfileNotification.vue');
+const Song = require('./components/queue/Song.vue');
 
 window.SonaraApp = new Vue({
   el: '#sonara-app',
-  components: {HeaderBar, Page}
+  components: {
+    Header, Page, PagePanel,
+    Profile, ProfileUser, ProfileNotification,
+    Song
+  },
+  data: {
+    currentUser: {
+      avatarUrl: './images/person.png',
+      name: 'John Smith',
+      points: 2000
+    },
+    currentNotifications: [
+      {
+        id: 1,
+        icon: 'arrow_forward',
+        description: 'Rewarded 20 Points',
+        user: {
+          avatarUrl: './images/person.png',
+          name: 'John Smith',
+          points: 2000
+        }
+      },
+      {
+        id: 2,
+        icon: 'arrow_forward',
+        description: 'Played a Song',
+        specifics: 'The Shadows - Foot Tapper',
+        user: {
+          avatarUrl: './images/person.png',
+          name: 'John Smith',
+          points: 2000
+        }
+      }
+    ],
+    currentSongs: [
+      {
+        id: 1,
+        artist: 'Drake',
+        name: 'In My Feelings',
+        rating: {
+          likes: 223,
+          dislikes: 1
+        },
+        progress: 100,
+        albumCover: './images/album.jpg'
+      },
+      {
+        id: 2,
+        artist: 'Drake',
+        name: 'Hotline Bling',
+        rating: {
+          likes: 223,
+          dislikes: 1
+        },
+        progress: 44,
+        albumCover: './images/album.jpg'
+      },
+      {
+        id: 3,
+        artist: 'Drake',
+        name: 'Controlla',
+        rating: {
+          likes: 223,
+          dislikes: 1
+        },
+        progress: 21,
+        albumCover: './images/album.jpg'
+      }
+    ]
+  }
 });
 
 function getChildElementByClassName($parentElement, childClassName) {

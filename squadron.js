@@ -8,6 +8,7 @@ myProgram.createParent({
 })
 .then(parentWindow => {
 
-    parentWindow.loadURL(`file://${__dirname}/public/index.html`)
+    parentWindow.loadURL(`file://${__dirname}/public/index.html`);
+    parentWindow.openDevTools();
 
 });

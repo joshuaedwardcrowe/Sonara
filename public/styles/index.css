@@ -29,13 +29,15 @@ body::-webkit-scrollbar {
     font-family: 'Overpass Mono';
 }
 
-#banner {
-    background-image: url(../images/banner-2.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 15em;
-    opacity: 0.6
+#page-content {
+    padding-top: 2em;
 }
+#user .collection {
+    border: 0 !important;
+}
+
+
+
 
 .tabs .tab a {
     color: white;
@@ -60,7 +62,7 @@ body::-webkit-scrollbar {
     border-bottom: 1.5px solid white;
 }
 
-.collection-item.avatar {
+.collection .collection-item.avatar {
     min-height: 0 !important;
 }
 
@@ -91,3 +93,27 @@ body::-webkit-scrollbar {
 .scrollable::-webkit-scrollbar-thumb:hover {
     background: #555;
 } 
+
+#user hr {
+    border: 1px solid white;
+}
+#user .collection .collection-item {
+    margin: .2em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.queue-item img {
+    height: 75px;
+}
+.queue-item .card-content {
+    padding: 15px;
+}
+.queue-item .card-content .progress {
+    margin: 0;
+    margin-top: 15px;
+}
+.queue-item .card-content a.btn-floating {
+    float: right;
+}
