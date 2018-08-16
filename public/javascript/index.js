@@ -47,6 +47,41 @@ window.SonaraApp = new Vue({
           points: 2000
         }
       }
+    ],
+    currentTracks: [
+      {
+        id: 1,
+        artist: 'Drake',
+        name: 'In My Feelings',
+        rating: {
+          likes: 223,
+          dislikes: 1
+        },
+        progress: 100,
+        albumCover: './images/album.jpg'
+      },
+      {
+        id: 2,
+        artist: 'Drake',
+        name: 'Hotline Bling',
+        rating: {
+          likes: 223,
+          dislikes: 1
+        },
+        progress: 44,
+        albumCover: './images/album.jpg'
+      },
+      {
+        id: 3,
+        artist: 'Drake',
+        name: 'Controlla',
+        rating: {
+          likes: 223,
+          dislikes: 1
+        },
+        progress: 21,
+        albumCover: './images/album.jpg'
+      }
     ]
   }
 });

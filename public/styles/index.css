@@ -108,7 +108,7 @@ body::-webkit-scrollbar {
     height: 75px;
 }
 .queue-item .card-content {
-    padding: 20px;
+    padding: 15px;
 }
 .queue-item .card-content .progress {
     margin: 0;

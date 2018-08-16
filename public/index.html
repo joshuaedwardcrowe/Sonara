@@ -37,7 +37,10 @@
           </profile-notification>
         </profile>
         <queued
-                slot="rightColumnContent">
+                slot="rightColumnContent"
+                v-for="currentTrack in currentTracks"
+                v-bind="currentTrack.id"
+                v-bind:track="currentTrack">
         </queued>
       </page-panel>
     </page>
