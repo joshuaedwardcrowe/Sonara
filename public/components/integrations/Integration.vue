@@ -5,16 +5,23 @@
         </div>
         <div class="card-stacked">
             <div class="card-content">
-                <p>{{integration.name}}</p>
-                <p>Connected at {{integration.connected}}</p>
+                <p>{{integration.name}} <i class="material-icons right grey-text">clear</i></p>
+                <p class="grey-text">Connected {{connectedDenotation}}</p>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+  const Twas = require('twas');
+
   module.exports = {
     template: '#integration-template',
-    props: {integration: Object}
+    props: {integration: Object},
+    computed: {
+      connectedDenotation: function () {
+        return Twas(this.integration.connected)
+      }
+    }
   }
 </script>

@@ -100,12 +100,24 @@ window.SonaraApp = new Vue({
     currentIntegrations: [
       {
         id: 1,
-        image: './images/album.jpg',
+        image: './images/spotify.png',
         name: 'Spotify',
         connected: new Date()
       }
     ],
     currentDevices: []
+  },
+  computed: {
+    chunkedIntegrations: function () {
+      const chunkedIntegrations = [];
+      let chunkIndex = 0;
+
+      while (chunkIndex < this.currentIntegrations.length) {
+        chunkedIntegrations.push(this.currentIntegrations.slice(chunkIndex, chunkIndex += 3))
+      }
+
+      return chunkedIntegrations;
+    }
   }
 });
 

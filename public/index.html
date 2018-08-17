@@ -55,7 +55,12 @@
       <span slot="panelThreeName">Integrations</span>
       <page-panel slot="panelThreeContent">
         <integration-list slot="singleColumnContent">
-          <integration slot="columnOneContent"></integration>
+          <integration
+                  slot="columnOneContent"
+                  v-for="chunkedIntegration in chunkedIntegrations[0]"
+                  v-bind:key="chunkedIntegration.id"
+                  v-bind:integration="chunkedIntegration">
+          </integration>
         </integration-list>
       </page-panel>
       <span slot="panelFourName">
