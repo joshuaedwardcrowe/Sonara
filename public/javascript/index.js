@@ -6,7 +6,6 @@ Vuegister.register();
 
 const BarComponent = require('./components/layout/Bar.vue');
 const PageComponent = require('./components/layout/Page.vue');
-const PagePanelComponent = require('./components/layout/PagePanel.vue');
 const SongComponent = require('./components/shared/Song.vue');
 const FabComponent = require('./components/shared/Fab.vue');
 const FabIconComponent = require('./components/shared/FabIcon.vue');
@@ -22,7 +21,6 @@ window.SonaraApp = new Vue({
   components: {
     Bar: BarComponent,
     Page: PageComponent,
-    PagePanel: PagePanelComponent,
     Song: SongComponent,
     Fab: FabComponent,
     FabIcon: FabIconComponent,
@@ -34,7 +32,7 @@ window.SonaraApp = new Vue({
     Integration: IntegrationComponent
   },
   mounted: function () {
-    establishOverviewTabs();
+    // establishOverviewTabs();
     establishStatusButton();
 
     console.log("Loaded.")

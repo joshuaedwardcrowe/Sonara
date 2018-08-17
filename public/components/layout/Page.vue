@@ -1,47 +1,20 @@
-<template id="page-template">
-    <div id="page">
-        <div id="page-topshelf" class="row">
-            <div class="col s4 offset-s2">
-                <ul id="tabs" class="tabs grey darken-4">
-                    <li class="tab col s3">
-                        <a href="#panelOne">
-                            <slot name="panelOneName"></slot>
-                        </a>
-                    </li>
-                    <li class="tab col s3">
-                        <a href="#panelTwo">
-                            <slot name="panelTwoName"></slot>
-                        </a>
-                    </li>
-                    <li class="tab col s4">
-                        <a href="#panelThree">
-                            <slot name="panelThreeName"></slot>
-                        </a>
-                    </li>
-                    <li class="tab col s2">
-                        <a href="#panelFour">
-                            <slot name="panelFourName"></slot>
-                        </a>
-                    </li>
-                </ul>
+<template>
+    <div>
+        <div class="row">
+            <div class="col s3">
+                <slot name="userInteractionColumn"></slot>
+            </div>
+            <div class="col s6">
+                <slot name="songQueueColumn"></slot>
+            </div>
+            <div class="col s3">
+                <slot name="songPreviewColumn"></slot>
             </div>
         </div>
-        <div id="page-content" class="row">
-            <div id="panelOne" class="col s12">
-                 <slot name="panelOneContent"></slot>
-            </div>
-            <div id="panelTwo" class="col s12">
-                <slot name="panelTwoContent"></slot>
-            </div>
-            <div id="panelThree" class="col s12">
-                <slot name="panelThreeContent"></slot>
-            </div>
-        </div>
+        <slot name="wholePageContent"></slot>
     </div>
 </template>
 
 <script>
-    module.exports = {
-      template: '#page-template'
-    }
+    module.exports = {}
 </script>
