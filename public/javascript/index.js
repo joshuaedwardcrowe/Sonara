@@ -4,23 +4,26 @@ const Vuegister = require('vuegister');
 // Handles single-file component registry
 Vuegister.register();
 
-const Bar = require('./components/layout/Bar.vue');
-const Page = require('./components/layout/Page.vue');
-const PagePanel = require('./components/layout/PagePanel.vue');
-const Profile = require('./components/queue/Profile.vue');
-const ProfileUser = require('./components/queue/ProfileUser.vue');
-const ProfileNotification = require('./components/queue/ProfileNotification.vue');
-const Song = require('./components/queue/Song.vue');
-const IntegrationList = require('./components/integrations/IntegrationList.vue');
-const Integration = require('./components/integrations/Integration.vue');
+const BarComponent = require('./components/layout/BarComponent.vue');
+const PageComponent = require('./components/layout/Page.vue');
+const PagePanelComponent = require('./components/layout/PagePanel.vue');
+const SongComponent = require('./components/shared/Song.vue');
+const FABComponent = require('./components/shared/FAB.vue');
+const FABLargeIconComponent = require('./components/shared/FABLargeIcon.vue');
+const FABSmallIconComponent = require('./components/shared/FABSmallIcon.vue');
+const ProfileComponent = require('./components/queue/Profile.vue');
+const ProfileUserComponent = require('./components/queue/ProfileUser.vue');
+const ProfileNotificationComponent = require('./components/queue/ProfileNotification.vue');
+const IntegrationListComponent = require('./components/integrations/IntegrationList.vue');
+const IntegrationComponent = require('./components/integrations/Integration.vue');
 
 window.SonaraApp = new Vue({
   el: '#sonara-app',
   components: {
-    Bar, Page, PagePanel,
-    Profile, ProfileUser, ProfileNotification,
-    Song,
-    IntegrationList, Integration
+    Bar: BarComponent, PageComponent, PagePanelComponent,
+    SongComponent, FABComponent, FABLargeIconComponent, FABSmallIconComponent,
+    ProfileComponent, ProfileUserComponent, ProfileNotificationComponent,
+    IntegrationListComponent, IntegrationComponent
   },
   data: {
     currentUser: {
@@ -85,7 +88,9 @@ window.SonaraApp = new Vue({
         progress: 21,
         albumCover: './images/album.jpg'
       }
-    ]
+    ],
+    currentIntegrations: [],
+    currentDevices: []
   }
 });
 

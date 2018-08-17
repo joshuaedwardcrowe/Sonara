@@ -1,12 +1,12 @@
 <template id="integration-template">
     <div class="card horizontal queue-item">
         <div class="card-image">
-            <img src="images/album.jpg">
+            <img v-bind:src="integration.image">
         </div>
         <div class="card-stacked">
             <div class="card-content">
-                <p>I am a very simple card {{t}}:{{a}}</p>
-                <p>Lorem ipsum dolor</p>
+                <p>{{integration.name}}</p>
+                <p>Connected at {{integration.connected}}</p>
             </div>
         </div>
     </div>
@@ -14,6 +14,7 @@
 
 <script>
   module.exports = {
-    template: '#integration-template'
+    template: '#integration-template',
+    props: {integration: Object}
   }
 </script>
