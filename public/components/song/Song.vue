@@ -13,6 +13,9 @@
                         </div>
                     </div>
                     <div class="col s6 right-align">
+                        <div class="clear-wrapper right-align">
+                            <p><i class="material-icons right">clear</i>Rank #22</p>
+                        </div>
                         <div class="btn-wrapper">
                             <a class="waves-effect waves-light btn red darken-2">
                                 <i class="material-icons left">arrow_downward</i>
@@ -21,7 +24,6 @@
                             <a class="waves-effect waves-light btn green darken-2">
                                 <i class="material-icons right">arrow_upward</i>23k
                             </a>
-                            <a class="waves-effect waves-light btn grey darken-4">#12</a>
                         </div>
                     </div>
                 </div>

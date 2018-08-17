@@ -39,7 +39,13 @@ div.card.horizontal div.card-image {
 div.card.horizontal div.card-image img {
     height: 100%;
 }
-div.card.horizontal div.card-stacked div.card-content div.row div.col.s6 div.meta-wrapper,
+div.card.horizontal div.card-stacked div.card-content {
+    padding: 10px;
+}
+
+div.card.horizontal div.card-stacked div.card-content div.row div.col.s6 div.meta-wrapper {
+    padding: 1em;
+}
 div.card.horizontal div.card-stacked div.card-content div.row div.col.s6 div.btn-wrapper {
-    padding: .5em;
+    padding: 1em;
 }
