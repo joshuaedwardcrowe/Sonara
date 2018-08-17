@@ -8,9 +8,8 @@ const BarComponent = require('./components/layout/Bar.vue');
 const PageComponent = require('./components/layout/Page.vue');
 const PagePanelComponent = require('./components/layout/PagePanel.vue');
 const SongComponent = require('./components/shared/Song.vue');
-const FABComponent = require('./components/shared/FAB.vue');
-const FABLargeIconComponent = require('./components/shared/FABLargeIcon.vue');
-const FABSmallIconComponent = require('./components/shared/FABSmallIcon.vue');
+const FabComponent = require('./components/shared/Fab.vue');
+const FabIconComponent = require('./components/shared/FabIcon.vue');
 const ProfileComponent = require('./components/queue/Profile.vue');
 const ProfileUserComponent = require('./components/queue/ProfileUser.vue');
 const ProfileNotificationComponent = require('./components/queue/ProfileNotification.vue');
@@ -25,15 +24,20 @@ window.SonaraApp = new Vue({
     Page: PageComponent,
     PagePanel: PagePanelComponent,
     Song: SongComponent,
-    FAB: FABComponent,
-    FABLargeIcon: FABLargeIconComponent,
-    FABSmallIcon: FABSmallIconComponent,
+    Fab: FabComponent,
+    FabIcon: FabIconComponent,
     Profile: ProfileComponent,
     ProfileUser: ProfileUserComponent,
     ProfileNotification: ProfileNotificationComponent,
     IntegrationList: IntegrationListComponent,
     IntegrationDetail: IntegrationDetailComponent,
     Integration: IntegrationComponent
+  },
+  mounted: function () {
+    establishOverviewTabs();
+    establishStatusButton();
+
+    console.log("Loaded.")
   },
   data: {
     currentUser: {
@@ -128,8 +132,8 @@ function getChildElementByClassName($parentElement, childClassName) {
   return $childElementPossibilities[0];
 }
 
-function establishOverviewTabs(tabsContainerId, options) {
-  const $tabsContainer = document.getElementById(tabsContainerId)
+function establishOverviewTabs() {
+  const $tabsContainer = document.getElementById('page-topshelf')
   const $tabsList = getChildElementByClassName($tabsContainer, 'tabs');
   const tabItemsCollection = $tabsList.getElementsByClassName('tab');
   const tabItems = [].slice.call(tabItemsCollection);
@@ -138,7 +142,7 @@ function establishOverviewTabs(tabsContainerId, options) {
 
   tabItems.forEach($tabItem => $tabItem.onclick = (e) => e.preventDefault());
 
-  window.Tabs = M.Tabs.init($tabsList, options);
+  window.Tabs = M.Tabs.init($tabsList, {});
   const Reference = tabAnchors[2].href;
   const Id = Reference.substring(Reference.indexOf("#") + 1, Reference.length);
 
@@ -146,16 +150,7 @@ function establishOverviewTabs(tabsContainerId, options) {
   Tabs.updateTabIndicator();
 }
 
-function establishStatusButton(buttonId, options) {
-  const $buttonContainer = document.getElementById(buttonId)
-  const FloatingActionButton = M.FloatingActionButton.init($buttonContainer, options);
+function establishStatusButton() {
+  const $buttonContainer = Array.from(document.getElementsByClassName('fixed-action-btn'));
+  const FloatingActionButton = $buttonContainer.map(x => M.FloatingActionButton.init(x, {}));
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  establishOverviewTabs('page-topshelf', {})
-  establishStatusButton('status', {})
-
-  console.log("Loaded.")
-
-});

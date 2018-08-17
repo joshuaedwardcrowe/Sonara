@@ -59,27 +59,43 @@
                   slot="columnOneContent"
                   v-for="chunkedIntegration in chunkedIntegrations[0]"
                   v-bind:key="chunkedIntegration.id"
-                  v-bind:integration="chunkedIntegration"
-                  v-on:click="sendIntegrationToDetailModal">
+                  v-bind:integration="chunkedIntegration">
           </integration>
           <integration
                   slot="columnTwoContent"
                   v-for="chunkedIntegration in chunkedIntegrations[1]"
                   v-bind:key="chunkedIntegration.id"
-                  v-bind:integration="chunkedIntegration"
-                  v-on:click="sendIntegrationToDetailModal">
+                  v-bind:integration="chunkedIntegration">
           </integration>
           <integration
                   slot="columnThreeContent"
                   v-for="chunkedIntegration in chunkedIntegrations[2]"
                   v-bind:key="chunkedIntegration.id"
-                  v-bind:integration="chunkedIntegration"
-                  v-on:click="sendIntegrationToDetailModal">
+                  v-bind:integration="chunkedIntegration">
           </integration>
         </integration-list>
+        <fab
+                slot="singleColumnContent"
+                term="arrow_forward"
+                background-color="red"
+                text-color="white">
+          <fab-icon
+                  slot="FabIcons"
+                  term="arrow_forward"
+                  background-color="red"
+                  text-color="white">
+          </fab-icon>
+          <fab-icon
+                  slot="FabIcons"
+                  term="arrow_forward"
+                  background-color="red"
+                  text-color="white">
+          </fab-icon>
+        </fab>
         <integration-detail
                 slot="singleColumnContent"
-                ref="integrationDetailModal">
+                ref="integrationDetailModal"
+                v-bind:integration="currentIntegrations[0]"> <!-- This binding is invalid for release. -->
         </integration-detail>
       </page-panel>
       <span slot="panelFourName">

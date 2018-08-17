@@ -1,4 +1,4 @@
-<template id="integration-template">
+<template>
     <div class="card horizontal queue-item" v-on:click="raiseClickedEvent">
         <div class="card-image">
             <img v-bind:src="integration.image">
@@ -16,7 +16,6 @@
   const Twas = require('twas');
 
   module.exports = {
-    template: '#integration-template',
     props: {integration: Object},
     computed: {
       connectedDenotation: function () {
