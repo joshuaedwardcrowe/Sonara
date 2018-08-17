@@ -12,96 +12,48 @@
 
 <body class="grey darken-4">
   <div id="sonara-app">
-    <bar people-count="11" connection-status="Connected"></bar>
-    <page>
-      <span slot="panelOneName">Queue</span>
-      <page-panel
-              slot="panelOneContent"
-              v-bind:multiple-columns="true"
-              v-bind:left-column-size="4"
-              v-bind:right-column-size="8">
-        <profile
-                slot="leftColumnContent"
-                avatar-url="images/person.jpg"
-                background-url="images/background.jpg"
-                name="John Smith">
-          <profile-user
-                  slot="user"
-                  v-bind:user="currentUser">
-          </profile-user>
-          <profile-notification
-                  slot="notifications"
-                  v-for="currentNotification in currentNotifications"
-                  v-bind:key="currentNotification.id"
-                  v-bind:notification="currentNotification">
-          </profile-notification>
-        </profile>
-        <song
-                slot="rightColumnContent"
-                v-for="currentSong in currentSongs"
-                v-bind:key="currentSong.id"
-                v-bind:song="currentSong">
-        </song>
-      </page-panel>
-      <span slot="panelTwoName">Charts</span>
-      <page-panel slot="panelTwoContent">
-        <song
-                slot="singleColumnContent"
-                v-for="currentSong in currentSongs"
-                v-bind:key="currentSong.id"
-                v-bind:song="currentSong">
-        </song>
-      </page-panel>
-      <span slot="panelThreeName">Integrations</span>
-      <page-panel slot="panelThreeContent">
-        <integration-list slot="singleColumnContent">
-          <integration
-                  slot="columnOneContent"
-                  v-for="chunkedIntegration in chunkedIntegrations[0]"
-                  v-bind:key="chunkedIntegration.id"
-                  v-bind:integration="chunkedIntegration">
-          </integration>
-          <integration
-                  slot="columnTwoContent"
-                  v-for="chunkedIntegration in chunkedIntegrations[1]"
-                  v-bind:key="chunkedIntegration.id"
-                  v-bind:integration="chunkedIntegration">
-          </integration>
-          <integration
-                  slot="columnThreeContent"
-                  v-for="chunkedIntegration in chunkedIntegrations[2]"
-                  v-bind:key="chunkedIntegration.id"
-                  v-bind:integration="chunkedIntegration">
-          </integration>
-        </integration-list>
-        <fab
-                slot="singleColumnContent"
-                term="arrow_forward"
-                background-color="red"
-                text-color="white">
-          <fab-icon
-                  slot="FabIcons"
+      <bar people-count="11" connection-status="Connected"></bar>
+      <page>
+          <profile
+                  slot="userInteractionColumn"
+                  avatar-url="images/person.jpg"
+                  background-url="images/background.jpg"
+                  name="John Smith">
+              <profile-user
+                      slot="user"
+                      v-bind:user="currentUser">
+              </profile-user>
+              <profile-notification
+                      slot="notifications"
+                      v-for="currentNotification in currentNotifications"
+                      v-bind:key="currentNotification.id"
+                      v-bind:notification="currentNotification">
+              </profile-notification>
+          </profile>
+          <song
+                  slot="songQueueColumn"
+                  v-for="currentSong in currentSongs"
+                  v-bind:key="currentSong.id"
+                  v-bind:song="currentSong">
+          </song>
+          <fab
+                  slot="wholePageContent"
                   term="arrow_forward"
                   background-color="red"
                   text-color="white">
-          </fab-icon>
-          <fab-icon
-                  slot="FabIcons"
-                  term="arrow_forward"
-                  background-color="red"
-                  text-color="white">
-          </fab-icon>
-        </fab>
-        <integration-detail
-                slot="singleColumnContent"
-                ref="integrationDetailModal"
-                v-bind:integration="currentIntegrations[0]"> <!-- This binding is invalid for release. -->
-        </integration-detail>
-      </page-panel>
-      <span slot="panelFourName">
-        <i class="material-icons">settings_remote</i>
-      </span>
-    </page>
+              <fab-icon
+                      slot="FabIcons"
+                      term="arrow_forward"
+                      background-color="red"
+                      text-color="white">
+              </fab-icon>
+              <fab-icon
+                      slot="FabIcons"
+                      term="arrow_forward"
+                      background-color="red"
+                      text-color="white">
+              </fab-icon>
+      </page>
   </div>
 
   <script src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
