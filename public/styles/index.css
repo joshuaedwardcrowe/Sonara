@@ -5,119 +5,41 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-.navbar-fixed nav {
+div.navbar-fixed nav {
     background-color: #2e2e2e;
 }
-.navbar-fixed nav .nav-wrapper {
+div.navbar-fixed nav .nav-wrapper {
     margin-left: 8.5em;
     margin-right: 8.5em;
 }
-.navbar-fixed nav .nav-wrapper a.brand-logo {
+div.navbar-fixed nav .nav-wrapper a.brand-logo {
     padding: .1em !important;
 }
-.navbar-fixed nav .nav-wrapper a.brand-logo img {
+div.navbar-fixed nav .nav-wrapper a.brand-logo img {
     height: 1em;
     margin-top: 0;
     margin-bottom: 0;
     margin: .4em;
     float: left;
 }
-.navbar-fixed nav .nav-wrapper a.brand-logo p {
+div.navbar-fixed nav .nav-wrapper a.brand-logo p {
     float: left;
     margin-top: 0;
     margin-bottom: 0;
     font-family: 'Overpass Mono';
 }
 
-#page-content {
-    padding-top: 2em;
+div.card.horizontal {
+    max-height: 100px;
 }
-#user .collection {
-    border: 0 !important;
+div.card.horizontal div.card-image {
+    max-height: 100px;
+    max-width: 100px;
 }
-
-
-
-
-.tabs .tab a {
-    color: white;
-    font-family: 'Fira Mono';
+div.card.horizontal div.card-image img {
+    height: 100%;
 }
-.tabs .tab a.active {
-    color: white;
-}
-.tabs .tab a:hover {
-    color: #e5e5e5;
-}
-.indicator {
-    background-color: white !important;
-}
-#page-topshelf {
-    border-bottom: 4px solid rgba(0,0,0,0.5);
-    margin-bottom: 0px !important;
-}
-
-.module-header {
-    padding-bottom: 0.5em;
-    border-bottom: 1.5px solid white;
-}
-
-.collection .collection-item.avatar {
-    min-height: 0 !important;
-}
-
-#recent-activity .module-container .collection,
-#recent-broadcasts .module-container .card-collection {
-    height: 69.5vh;
-    padding-right: 0.2em;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    border: 0;
-}
- /* width */
-.scrollable::-webkit-scrollbar {
-    width: 2px;
-}
-
-/* Track */
-.scrollable::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-/* Handle */
-.scrollable::-webkit-scrollbar-thumb {
-    background: black;
-}
-
-/* Handle on hover */
-.scrollable::-webkit-scrollbar-thumb:hover {
-    background: #555;
-} 
-
-#user hr {
-    border: 1px solid white;
-}
-#user .collection .collection-item {
-    margin: .2em;
-    margin-left: 0;
-    margin-right: 0;
-}
-
-
-.queue-item img {
-    height: 75px;
-}
-.queue-item .card-content {
-    padding: 15px;
-}
-.queue-item .card-content .progress {
-    margin: 0;
-    margin-top: 15px;
-}
-.queue-item .card-content a.btn-floating {
-    float: right;
-}
-
-.tabs .tab i {
-    margin-top: 0.5em;
+div.card.horizontal div.card-stacked div.card-content div.row div.col.s6 div.meta-wrapper,
+div.card.horizontal div.card-stacked div.card-content div.row div.col.s6 div.btn-wrapper {
+    padding: .5em;
 }

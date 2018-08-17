@@ -8,7 +8,7 @@
                 <slot name="songQueueColumn"></slot>
             </div>
             <div class="col s3">
-                <slot name="songPreviewColumn"></slot>
+                <slot name="songOverviewColumn"></slot>
             </div>
         </div>
         <slot name="wholePageContent"></slot>
