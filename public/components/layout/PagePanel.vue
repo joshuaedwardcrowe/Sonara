@@ -13,6 +13,7 @@
                 SINGLE COLUMN
             </div>
         </div>
+        <slot name="FABContent"></slot>
     </div>
 </template>
 

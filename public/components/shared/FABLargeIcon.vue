@@ -5,9 +5,9 @@
 </template>
 
 <script>
-  export default {
-    name: "FABLargeIcon"
-  }
+    module.exports = {
+      props: {FABLargeIcon: Object}
+    }
 </script>
 
 <style scoped>
