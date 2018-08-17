@@ -1,4 +1,4 @@
-<template id="integration-list-template">
+<template>
     <div class="row">
         <div class="col s4">
             <slot name="columnOneContent"></slot>
@@ -13,7 +13,5 @@
 </template>
 
 <script>
-    module.exports = {
-      template: '#integration-list-template'
-    }
+    module.exports = {}
 </script>

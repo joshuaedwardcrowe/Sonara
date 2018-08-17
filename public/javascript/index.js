@@ -97,7 +97,14 @@ window.SonaraApp = new Vue({
         albumCover: './images/album.jpg'
       }
     ],
-    currentIntegrations: [],
+    currentIntegrations: [
+      {
+        id: 1,
+        image: './images/album.jpg',
+        name: 'Spotify',
+        connected: new Date()
+      }
+    ],
     currentDevices: []
   }
 });
