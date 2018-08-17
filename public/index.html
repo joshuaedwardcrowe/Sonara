@@ -59,9 +59,28 @@
                   slot="columnOneContent"
                   v-for="chunkedIntegration in chunkedIntegrations[0]"
                   v-bind:key="chunkedIntegration.id"
-                  v-bind:integration="chunkedIntegration">
+                  v-bind:integration="chunkedIntegration"
+                  v-on:click="sendIntegrationToDetailModal">
+          </integration>
+          <integration
+                  slot="columnTwoContent"
+                  v-for="chunkedIntegration in chunkedIntegrations[1]"
+                  v-bind:key="chunkedIntegration.id"
+                  v-bind:integration="chunkedIntegration"
+                  v-on:click="sendIntegrationToDetailModal">
+          </integration>
+          <integration
+                  slot="columnThreeContent"
+                  v-for="chunkedIntegration in chunkedIntegrations[2]"
+                  v-bind:key="chunkedIntegration.id"
+                  v-bind:integration="chunkedIntegration"
+                  v-on:click="sendIntegrationToDetailModal">
           </integration>
         </integration-list>
+        <integration-detail
+                slot="singleColumnContent"
+                ref="integrationDetailModal">
+        </integration-detail>
       </page-panel>
       <span slot="panelFourName">
         <i class="material-icons">settings_remote</i>

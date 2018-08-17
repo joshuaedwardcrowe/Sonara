@@ -1,5 +1,5 @@
 <template id="integration-template">
-    <div class="card horizontal queue-item">
+    <div class="card horizontal queue-item" v-on:click="raiseClickedEvent">
         <div class="card-image">
             <img v-bind:src="integration.image">
         </div>
@@ -21,6 +21,11 @@
     computed: {
       connectedDenotation: function () {
         return Twas(this.integration.connected)
+      }
+    },
+    methods: {
+      raiseClickedEvent: function () {
+        this.$emit('click', this.integration);
       }
     }
   }

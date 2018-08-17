@@ -15,6 +15,7 @@ const ProfileComponent = require('./components/queue/Profile.vue');
 const ProfileUserComponent = require('./components/queue/ProfileUser.vue');
 const ProfileNotificationComponent = require('./components/queue/ProfileNotification.vue');
 const IntegrationListComponent = require('./components/integrations/IntegrationList.vue');
+const IntegrationDetailComponent = require('./components/integrations/IntegrationDetail.vue');
 const IntegrationComponent = require('./components/integrations/Integration.vue');
 
 window.SonaraApp = new Vue({
@@ -31,6 +32,7 @@ window.SonaraApp = new Vue({
     ProfileUser: ProfileUserComponent,
     ProfileNotification: ProfileNotificationComponent,
     IntegrationList: IntegrationListComponent,
+    IntegrationDetail: IntegrationDetailComponent,
     Integration: IntegrationComponent
   },
   data: {
