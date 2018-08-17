@@ -24,9 +24,6 @@
     module.exports = {
       template: '#song-template',
       props: {song: Object},
-      mounted: function () {
-        console.log(`Song: ${this.song}`)
-      },
       computed: {
         progressStyle: function () {
           return `width: ${this.song.progress}%`;

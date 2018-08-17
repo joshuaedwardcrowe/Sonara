@@ -20,6 +20,8 @@
   "dependencies": {
     "electron": "^2.0.6",
     "materialize-css": "^1.0.0-rc.2",
+    "npm": "^6.4.0",
+    "twas": "^2.0.1",
     "vue": "^2.5.17",
     "vuegister": "^0.2.2"
   }

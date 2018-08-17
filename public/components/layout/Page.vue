@@ -8,14 +8,19 @@
                             <slot name="panelOneName"></slot>
                         </a>
                     </li>
-                    <li class="tab col s4">
+                    <li class="tab col s3">
                         <a href="#panelTwo">
                             <slot name="panelTwoName"></slot>
                         </a>
                     </li>
-                    <li class="tab col s3">
+                    <li class="tab col s4">
                         <a href="#panelThree">
                             <slot name="panelThreeName"></slot>
+                        </a>
+                    </li>
+                    <li class="tab col s2">
+                        <a href="#panelFour">
+                            <slot name="panelFourName"></slot>
                         </a>
                     </li>
                 </ul>

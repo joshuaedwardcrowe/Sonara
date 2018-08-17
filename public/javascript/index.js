@@ -4,20 +4,40 @@ const Vuegister = require('vuegister');
 // Handles single-file component registry
 Vuegister.register();
 
-const Bar = require('./components/layout/Bar.vue');
-const Page = require('./components/layout/Page.vue');
-const PagePanel = require('./components/layout/PagePanel.vue');
-const Profile = require('./components/queue/Profile.vue');
-const ProfileUser = require('./components/queue/ProfileUser.vue');
-const ProfileNotification = require('./components/queue/ProfileNotification.vue');
-const Song = require('./components/queue/Song.vue');
+const BarComponent = require('./components/layout/Bar.vue');
+const PageComponent = require('./components/layout/Page.vue');
+const PagePanelComponent = require('./components/layout/PagePanel.vue');
+const SongComponent = require('./components/shared/Song.vue');
+const FabComponent = require('./components/shared/Fab.vue');
+const FabIconComponent = require('./components/shared/FabIcon.vue');
+const ProfileComponent = require('./components/queue/Profile.vue');
+const ProfileUserComponent = require('./components/queue/ProfileUser.vue');
+const ProfileNotificationComponent = require('./components/queue/ProfileNotification.vue');
+const IntegrationListComponent = require('./components/integrations/IntegrationList.vue');
+const IntegrationDetailComponent = require('./components/integrations/IntegrationDetail.vue');
+const IntegrationComponent = require('./components/integrations/Integration.vue');
 
 window.SonaraApp = new Vue({
   el: '#sonara-app',
   components: {
-    Bar, Page, PagePanel,
-    Profile, ProfileUser, ProfileNotification,
-    Song
+    Bar: BarComponent,
+    Page: PageComponent,
+    PagePanel: PagePanelComponent,
+    Song: SongComponent,
+    Fab: FabComponent,
+    FabIcon: FabIconComponent,
+    Profile: ProfileComponent,
+    ProfileUser: ProfileUserComponent,
+    ProfileNotification: ProfileNotificationComponent,
+    IntegrationList: IntegrationListComponent,
+    IntegrationDetail: IntegrationDetailComponent,
+    Integration: IntegrationComponent
+  },
+  mounted: function () {
+    establishOverviewTabs();
+    establishStatusButton();
+
+    console.log("Loaded.")
   },
   data: {
     currentUser: {
@@ -82,7 +102,28 @@ window.SonaraApp = new Vue({
         progress: 21,
         albumCover: './images/album.jpg'
       }
-    ]
+    ],
+    currentIntegrations: [
+      {
+        id: 1,
+        image: './images/spotify.png',
+        name: 'Spotify',
+        connected: new Date()
+      }
+    ],
+    currentDevices: []
+  },
+  computed: {
+    chunkedIntegrations: function () {
+      const chunkedIntegrations = [];
+      let chunkIndex = 0;
+
+      while (chunkIndex < this.currentIntegrations.length) {
+        chunkedIntegrations.push(this.currentIntegrations.slice(chunkIndex, chunkIndex += 3))
+      }
+
+      return chunkedIntegrations;
+    }
   }
 });
 
@@ -91,8 +132,8 @@ function getChildElementByClassName($parentElement, childClassName) {
   return $childElementPossibilities[0];
 }
 
-function establishOverviewTabs(tabsContainerId, options) {
-  const $tabsContainer = document.getElementById(tabsContainerId)
+function establishOverviewTabs() {
+  const $tabsContainer = document.getElementById('page-topshelf')
   const $tabsList = getChildElementByClassName($tabsContainer, 'tabs');
   const tabItemsCollection = $tabsList.getElementsByClassName('tab');
   const tabItems = [].slice.call(tabItemsCollection);
@@ -101,24 +142,15 @@ function establishOverviewTabs(tabsContainerId, options) {
 
   tabItems.forEach($tabItem => $tabItem.onclick = (e) => e.preventDefault());
 
-  window.Tabs = M.Tabs.init($tabsList, options);
-  const Reference = tabAnchors[1].href;
+  window.Tabs = M.Tabs.init($tabsList, {});
+  const Reference = tabAnchors[2].href;
   const Id = Reference.substring(Reference.indexOf("#") + 1, Reference.length);
 
   Tabs.select(Id);
   Tabs.updateTabIndicator();
 }
 
-function establishStatusButton(buttonId, options) {
-  const $buttonContainer = document.getElementById(buttonId)
-  const FloatingActionButton = M.FloatingActionButton.init($buttonContainer, options);
+function establishStatusButton() {
+  const $buttonContainer = Array.from(document.getElementsByClassName('fixed-action-btn'));
+  const FloatingActionButton = $buttonContainer.map(x => M.FloatingActionButton.init(x, {}));
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  establishOverviewTabs('page-topshelf', {})
-  establishStatusButton('status', {})
-
-  console.log("Loaded.")
-
-});

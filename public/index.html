@@ -52,18 +52,56 @@
                 v-bind:song="currentSong">
         </song>
       </page-panel>
+      <span slot="panelThreeName">Integrations</span>
+      <page-panel slot="panelThreeContent">
+        <integration-list slot="singleColumnContent">
+          <integration
+                  slot="columnOneContent"
+                  v-for="chunkedIntegration in chunkedIntegrations[0]"
+                  v-bind:key="chunkedIntegration.id"
+                  v-bind:integration="chunkedIntegration">
+          </integration>
+          <integration
+                  slot="columnTwoContent"
+                  v-for="chunkedIntegration in chunkedIntegrations[1]"
+                  v-bind:key="chunkedIntegration.id"
+                  v-bind:integration="chunkedIntegration">
+          </integration>
+          <integration
+                  slot="columnThreeContent"
+                  v-for="chunkedIntegration in chunkedIntegrations[2]"
+                  v-bind:key="chunkedIntegration.id"
+                  v-bind:integration="chunkedIntegration">
+          </integration>
+        </integration-list>
+        <fab
+                slot="singleColumnContent"
+                term="arrow_forward"
+                background-color="red"
+                text-color="white">
+          <fab-icon
+                  slot="FabIcons"
+                  term="arrow_forward"
+                  background-color="red"
+                  text-color="white">
+          </fab-icon>
+          <fab-icon
+                  slot="FabIcons"
+                  term="arrow_forward"
+                  background-color="red"
+                  text-color="white">
+          </fab-icon>
+        </fab>
+        <integration-detail
+                slot="singleColumnContent"
+                ref="integrationDetailModal"
+                v-bind:integration="currentIntegrations[0]"> <!-- This binding is invalid for release. -->
+        </integration-detail>
+      </page-panel>
+      <span slot="panelFourName">
+        <i class="material-icons">settings_remote</i>
+      </span>
     </page>
-  </div>
-
-
-  <div id="status" class="fixed-action-btn">
-    <a class="btn-floating btn-large white">
-            <i class="large material-icons black-text">present_to_all</i>
-          </a>
-    <ul>
-      <li><a class="btn-floating green darken-3"><i class="material-icons">radio_button_checked</i></a></li>
-      <li><a class="btn-floating red darken-3"><i class="material-icons">radio_button_unchecked</i></a></li>
-    </ul>
   </div>
 
   <script src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
