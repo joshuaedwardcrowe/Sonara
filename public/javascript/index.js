@@ -6,8 +6,6 @@ Vuegister.register();
 
 const BarComponent = require('./components/layout/Bar.vue');
 const PageComponent = require('./components/layout/Page.vue');
-const FabComponent = require('./components/shared/Fab.vue');
-const FabIconComponent = require('./components/shared/FabIcon.vue');
 const ProfileComponent = require('./components/queue/Profile.vue');
 const ProfileUserComponent = require('./components/queue/ProfileUser.vue');
 const ProfileNotificationComponent = require('./components/queue/ProfileNotification.vue');
@@ -19,8 +17,6 @@ window.SonaraApp = new Vue({
   components: {
     Bar: BarComponent,
     Page: PageComponent,
-    Fab: FabComponent,
-    FabIcon: FabIconComponent,
     Profile: ProfileComponent,
     ProfileUser: ProfileUserComponent,
     ProfileNotification: ProfileNotificationComponent,

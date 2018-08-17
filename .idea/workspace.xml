@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd25d4ec-a1e2-4fa3-8735-f5951d3fbf0e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/public/components/layout/Page.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/components/layout/Page.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/styles/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/components/shared/Fab.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/components/shared/FabIcon.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/javascript/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascript/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -73,7 +74,7 @@
         <counts>
           <entry key="css" value="9" />
           <entry key="html" value="10" />
-          <entry key="js" value="16" />
+          <entry key="js" value="17" />
           <entry key="json" value="2" />
           <entry key="txt" value="1" />
           <entry key="vue" value="73" />
@@ -85,7 +86,7 @@
           <entry key="CSS" value="9" />
           <entry key="HTML" value="10" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="16" />
+          <entry key="JavaScript" value="17" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Vue.js" value="73" />
           <entry key="XML" value="1" />
@@ -121,12 +122,21 @@
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+              <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/javascript/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/styles/index.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="46">
@@ -227,12 +237,12 @@
         <option value="$PROJECT_DIR$/public/components/shared/FabIcon.vue" />
         <option value="$PROJECT_DIR$/public/components/shared/Fab.vue" />
         <option value="$PROJECT_DIR$/public/old.txt" />
-        <option value="$PROJECT_DIR$/public/javascript/index.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/components/song/Song.vue" />
         <option value="$PROJECT_DIR$/public/components/song/SongOverview.vue" />
         <option value="$PROJECT_DIR$/public/components/layout/Page.vue" />
         <option value="$PROJECT_DIR$/public/styles/index.css" />
+        <option value="$PROJECT_DIR$/public/javascript/index.js" />
       </list>
     </option>
   </component>
@@ -300,13 +310,6 @@
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="queue" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sonara" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sonara" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Sonara" type="b2602c69:ProjectViewProjectNode" />
@@ -400,7 +403,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73836000" />
+    <option name="totallyTimeSpent" value="73942000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -519,13 +522,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/components/layout/PagePanel.vue" />
     <entry file="file://$PROJECT_DIR$/public/old.txt" />
-    <entry file="file://$PROJECT_DIR$/public/javascript/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/components/layout/Bar.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -558,17 +554,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/styles/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="2" column="20" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascript/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
         </state>
       </provider>
     </entry>
