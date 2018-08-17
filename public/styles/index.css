@@ -49,3 +49,7 @@ div.card.horizontal div.card-stacked div.card-content div.row div.col.s6 div.met
 div.card.horizontal div.card-stacked div.card-content div.row div.col.s6 div.btn-wrapper {
     padding: 1em;
 }
+
+.bottom {
+    margin-top: 15vh !important;
+}
