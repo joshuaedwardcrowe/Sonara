@@ -12,49 +12,7 @@
 
 <body class="grey darken-4">
   <div id="sonara-app">
-      <bar people-count="11" connection-status="Connected"></bar>
-      <page>
-          <profile
-                  slot="userInteractionColumn"
-                  avatar-url="images/person.jpg"
-                  background-url="images/background.jpg"
-                  name="John Smith">
-              <profile-user
-                      slot="user"
-                      v-bind:user="currentUser">
-              </profile-user>
-              <profile-notification
-                      slot="notifications"
-                      v-for="currentNotification in currentNotifications"
-                      v-bind:key="currentNotification.id"
-                      v-bind:notification="currentNotification">
-              </profile-notification>
-          </profile>
-          <song
-                  slot="songQueueColumn"
-                  v-for="currentSong in currentSongs"
-                  v-bind:key="currentSong.id"
-                  v-bind:song="currentSong">
-          </song>
-          <song-overview slot="songOverviewColumn"></song-overview>
-          <fab
-                  slot="wholePageContent"
-                  term="arrow_forward"
-                  background-color="red"
-                  text-color="white">
-              <fab-icon
-                      slot="FabIcons"
-                      term="arrow_forward"
-                      background-color="red"
-                      text-color="white">
-              </fab-icon>
-              <fab-icon
-                      slot="FabIcons"
-                      term="arrow_forward"
-                      background-color="red"
-                      text-color="white">
-              </fab-icon>
-      </page>
+      // STARTING FRESH
   </div>
 
   <script src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
