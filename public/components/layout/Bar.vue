@@ -1,4 +1,4 @@
-<template id="bar-template">
+<template>
     <div class="navbar-fixed grey darken-4">
         <nav>
             <div class="nav-wrapper">
@@ -16,17 +16,5 @@
 </template>
 
 <script type="text/javascript">
-    module.exports = {
-      template: '#bar-template',
-      props: ['peopleCount', 'connectionStatus'],
-      computed: {
-        connectionIcon: function () {
-          switch (this.connectionStatus) {
-            case 'Connected': return 'signal_cellular_4_bar';
-            case 'Problematic': return 'signal_cellular_connected_no_internet_4_bar';
-            default: return 'signal_cellular_null';
-          }
-        }
-      }
-    }
+    module.exports =  {}
 </script>
