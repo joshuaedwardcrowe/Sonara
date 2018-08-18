@@ -6,30 +6,22 @@ Vuegister.register();
 
 const BarComponent = require('./components/layout/Bar.vue');
 const PageComponent = require('./components/layout/Page.vue');
-const SongComponent = require('./components/shared/Song.vue');
-const FabComponent = require('./components/shared/Fab.vue');
-const FabIconComponent = require('./components/shared/FabIcon.vue');
 const ProfileComponent = require('./components/queue/Profile.vue');
 const ProfileUserComponent = require('./components/queue/ProfileUser.vue');
 const ProfileNotificationComponent = require('./components/queue/ProfileNotification.vue');
-const IntegrationListComponent = require('./components/integrations/IntegrationList.vue');
-const IntegrationDetailComponent = require('./components/integrations/IntegrationDetail.vue');
-const IntegrationComponent = require('./components/integrations/Integration.vue');
+const SongComponent = require('./components/song/Song.vue');
+const SongOverviewComponent = require('./components/song/SongOverview.vue');
 
 window.SonaraApp = new Vue({
   el: '#sonara-app',
   components: {
     Bar: BarComponent,
     Page: PageComponent,
-    Song: SongComponent,
-    Fab: FabComponent,
-    FabIcon: FabIconComponent,
     Profile: ProfileComponent,
     ProfileUser: ProfileUserComponent,
     ProfileNotification: ProfileNotificationComponent,
-    IntegrationList: IntegrationListComponent,
-    IntegrationDetail: IntegrationDetailComponent,
-    Integration: IntegrationComponent
+    Song: SongComponent,
+    SongOverview: SongOverviewComponent
   },
   mounted: function () {
     // establishOverviewTabs();
