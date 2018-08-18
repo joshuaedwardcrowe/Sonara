@@ -1,18 +1,11 @@
 body {
-    background-color: #e5e5e5;
     overflow: hidden;
 }
 body::-webkit-scrollbar {
     display: none;
 }
 
-#page {
-    padding: 1em;
-}
 
-div.navbar-fixed nav {
-    background-color: #2e2e2e;
-}
 div.navbar-fixed nav .nav-wrapper {
     margin-left: 8.5em;
     margin-right: 8.5em;
@@ -32,37 +25,4 @@ div.navbar-fixed nav .nav-wrapper a.brand-logo p {
     margin-top: 0;
     margin-bottom: 0;
     font-family: 'Overpass Mono';
-}
-
-div.card.horizontal {
-    max-height: 100px;
-}
-div.card.horizontal div.card-image {
-    max-height: 100px;
-    max-width: 100px;
-}
-div.card.horizontal div.card-image img {
-    height: 100%;
-}
-div.card.horizontal div.card-stacked div.card-content {
-    padding: 10px;
-}
-
-div.card.horizontal div.card-stacked div.card-content div.row div.col.s6 div.meta-wrapper {
-    padding: 1em;
-}
-div.card.horizontal div.card-stacked div.card-content div.row div.col.s6 div.btn-wrapper {
-    padding: 1em;
-}
-
-h4 {
-    margin: 0;
-    padding: .3em;
-    padding-left: 0;
-    font-family: 'Fira Mono';
-    color: white;
-    font-weight: bold;
-}
-.bottom {
-    margin-top: 5vh !important;
 }
