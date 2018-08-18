@@ -18,8 +18,13 @@
                   device-name="Sonos One">
           </connection-icon>
           <listeners-icon v-bind:count="11"></listeners-icon>
-          <report-bug report-url="https://google.com"></report-bug-button>
+          <report-bug report-url="https://google.com"></report-bug>
       </bar>
+      <page>
+          <page-column v-bind:size="2" v-bind:shadowed="true"></page-column>
+          <page-column v-bind:size="7" v-bind:shadowed="false"></page-column>
+          <page-column v-bind:size="3" v-bind:shadowed="true"></page-column>
+      </page>
   </div>
 
   <script src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
