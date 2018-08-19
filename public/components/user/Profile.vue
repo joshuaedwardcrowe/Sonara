@@ -2,7 +2,7 @@
     <ul class="collection">
         <li class="collection-item avatar profile mh-0 transparent">
             <img v-bind:src="user.imageUrl" class="circle">
-            <span class="title">J{{user.name}}</span>
+            <span class="title">{{user.name}}</span>
             <p class="grey-text">{{pointsDenotation}} Points</p>
         </li>
     </ul>

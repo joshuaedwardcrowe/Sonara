@@ -15,6 +15,14 @@
           type: Boolean,
           default: false
         },
+        floating: {
+          type: Boolean,
+          default: false
+        },
+        large: {
+          type: Boolean,
+          default: false,
+        },
         label: {
           type: String,
           default: ''
@@ -31,11 +39,15 @@
         },
         iconPosition: {
           type: String,
-          default: 'center'
+          default: ''
         },
         textColor: {
           type: String,
           default: 'Black'
+        },
+        waveColor: {
+          type: String,
+          default: 'light'
         },
         backgroundColor: {
           type: String,
@@ -57,21 +69,33 @@
         buttonTextClass: function () {
           return `${this.textColor}-text`
         },
+        buttonWavesClass: function () {
+          return `waves-${this.waveColor}`
+        },
+        buttonSizeClass: function () {
+          return this.large ? 'btn-large' : ''
+        },
+        buttonFloatClass: function () {
+          return this.floating ? 'btn-floating' : ''
+        },
         buttonClasses: function () {
           return [
              ...this.standardClasses,
+            this.buttonWavesClass,
             this.backgroundColor,
             this.position,
             this.buttonTextClass,
             this.buttonFlatnessClass,
-            this.buttonTooltipClass
+            this.buttonSizeClass,
+            this.buttonTooltipClass,
+            this.buttonFloatClass
           ]
         },
         buttonPosition: function () {
           return !!this.tooltip ? 'bottom' : ''
         },
         iconClasses: function () {
-          return ['material-icons', this.iconPosition]
+          return ['material-icons', this.iconPosition, this.buttonTextClass]
         }
       },
       methods: {

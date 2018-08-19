@@ -78,6 +78,9 @@ div.card span.card-title.card-subtitle {
     font-size: 15px;
     padding-bottom: 11px;
 }
+div.card div.card-content div.row div.col a.btn {
+    margin: .5em;
+}
 
 
 ul.collection {
@@ -99,15 +102,23 @@ ul.collection li.collection-item.song p {
     display: inline-block;
     margin-left: 1.5em;
     font-size: 17px;
-    padding: 0.3em;
+    padding: 0.5em;
 }
 ul.collection li.collection-item.song p:first-child {
     font-weight: bold;
 }
-ul.collection li.collection-item.song a.btn {
+ul.collection li.collection-item.song a.btn,
+ul.collection li.collection-item.song a.btn-flat {
     margin: .5em;
     margin-top: 0;
     margin-bottom: 0;
+}
+ul.collection li.collection-item.song a.btn-flat {
+    margin-top: .3em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: .4em;
+    padding-right: .4em;
 }
 ul.collection li.collection-item.profile {
     border-bottom: 0 !important;;

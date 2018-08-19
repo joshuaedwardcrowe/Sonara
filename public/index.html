@@ -23,14 +23,16 @@
                   background-color="white"
                   text-color="text-darken-4 purple"
                   icon-name="healing"
-                  icon-position="right">
+                  icon-position="right"
+                  wave-color="dark">
           </clicker>
           <clicker
                   label="Lock the Queue"
                   background-color="white"
                   text-color="text-darken-4 purple"
                   icon-name="lock_outline"
-                  icon-position="right">
+                  icon-position="right"
+                  wave-color="dark">
           </clicker>
       </bar>
       <page>
@@ -54,23 +56,29 @@
                     <clicker
                             v-bind:flat="true"
                             icon-name="clear"
-                            position="right">
+                            position="right"
+                            wave-color="dark">
                     </clicker>
                     <clicker
                             v-bind:flat="true"
                             icon-name="more_vert"
                             position="right"
-                            v-on:click="openDetailModal">
+                            v-on:click="openDetailModal"
+                            wave-color="dark">
                     </clicker>
                     <clicker
                             text-color="red"
+                            :floating="true"
                             icon-name="arrow_downward"
-                            position="right">
+                            position="right"
+                            wave-color="dark">
                     </clicker>
                     <clicker
                             text-color="green"
+                            :floating="true"
                             icon-name="arrow_upward"
-                            position="right">
+                            position="right"
+                            wave-color="dark">
                     </clicker>
                 </song>
               </list>
@@ -78,41 +86,55 @@
           </page-column>
           <page-column v-bind:size="3" v-bind:shadowed="true">
 
-              <div class="card">
-                  <div class="card-image">
-                      <img src="images/album.jpg">
-                      <span class="card-title card-overtitle">Hotline Bling</span>
-                      <span class="card-title card-subtitle">Drake</span>
-                  </div>
-                  <div class="card-content">
-                      <div class="progress grey lighten-4">
-                          <div class="determinate purple darken-4" style="width: 70%"></div>
-                      </div>
-                      <div class="row">
-                          <div class="col s2">0:22</div>
-                          <div class="col s2 offset-s8">3:49</div>
-                      </div>
-                      <div class="row">
-                          <div class="col s12 center-align">
-                              <a class="btn-floating btn-large waves-effect waves-light purple darken-4"><i class="material-icons">fast_rewind</i></a>
-                              <a class="btn-floating btn-large waves-effect waves-light purple darken-4"><i class="material-icons">pause</i></a>
-                              <a class="btn-floating btn-large waves-effect waves-light purple darken-4"><i class="material-icons">fast_forward</i></a>
-                          </div>
-                      </div>
-                      <div class="p-1"></div>
-                      <div class="row">
-                          <div class="col s12 center-align">
-                              <a class="waves-effect waves-dark btn white red-text"><i class="material-icons left">arrow_downward</i>22,000</a>
-                              <a class="waves-effect waves-dark btn white green-text"><i class="material-icons right">arrow_upward</i>22,000</a>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col s12 center-align">
-                              <p class="bottom">&copy; Something Records 2018</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+              <song-playing :song="currentSongs[0]">
+
+                  <loader ref="songLoader" slot="progressBar" :progress="playingSongProgress"></loader>
+                  <clicker
+                          slot="controlButtons"
+                          text-color="white"
+                          background-color="purple darken-4"
+                          :floating="true"
+                          :large="true"
+                          icon-name="fast_rewind">
+                  </clicker>
+                  <clicker
+                          slot="controlButtons"
+                          text-color="white"
+                          background-color="purple darken-4"
+                          :floating="true"
+                          :large="true"
+                          icon-name="pause">
+                  </clicker>
+                  <clicker
+                          slot="controlButtons"
+                          text-color="white"
+                          background-color="purple darken-4"
+                          :floating="true"
+                          :large="true"
+                          icon-name="fast_forward">
+                  </clicker>
+                  <clicker
+                          slot="appreciationButtons"
+                          :label="getNumberDenotation(22200)"
+                          text-color="green"
+                          background-color="white"
+                          icon-name="arrow_upward"
+                          icon-position="left"
+                          wave-color="dark">
+                  </clicker>
+                  <clicker
+                          slot="appreciationButtons"
+                          :label="getNumberDenotation(2200)"
+                          text-color="red"
+                          background-color="white"
+                          icon-name="arrow_downward"
+                          icon-position="right"
+                          wave-color="dark">
+                  </clicker>
+
+
+              </song-playing>
+
 
           </page-column>
       </page>
