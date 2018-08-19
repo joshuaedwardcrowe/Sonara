@@ -1,7 +1,7 @@
 <template>
-    <div id="page" class="row grey  mt-1 lighten-3">
+    <ul class="collection">
         <slot></slot>
-    </div>
+    </ul>
 </template>
 
 <script>

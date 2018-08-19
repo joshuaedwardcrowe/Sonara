@@ -1,18 +1,11 @@
 body {
-    background-color: #e5e5e5;
     overflow: hidden;
 }
 body::-webkit-scrollbar {
     display: none;
 }
 
-#page {
-    padding: 1em;
-}
 
-div.navbar-fixed nav {
-    background-color: #2e2e2e;
-}
 div.navbar-fixed nav .nav-wrapper {
     margin-left: 8.5em;
     margin-right: 8.5em;
@@ -34,35 +27,88 @@ div.navbar-fixed nav .nav-wrapper a.brand-logo p {
     font-family: 'Overpass Mono';
 }
 
-div.card.horizontal {
-    max-height: 100px;
-}
-div.card.horizontal div.card-image {
-    max-height: 100px;
-    max-width: 100px;
-}
-div.card.horizontal div.card-image img {
-    height: 100%;
-}
-div.card.horizontal div.card-stacked div.card-content {
-    padding: 10px;
+#page > .col {
+    height: calc(100vh - 50px);
 }
 
-div.card.horizontal div.card-stacked div.card-content div.row div.col.s6 div.meta-wrapper {
-    padding: 1em;
-}
-div.card.horizontal div.card-stacked div.card-content div.row div.col.s6 div.btn-wrapper {
-    padding: 1em;
-}
 
-h4 {
-    margin: 0;
-    padding: .3em;
-    padding-left: 0;
-    font-family: 'Fira Mono';
-    color: white;
+.m-0 {
+    margin: 0 !important;
+}
+.mt-1 {
+    margin-top: 1em;
+}
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+.p-1 {
+    padding: 1em;
+}
+.pt-1 {
+    padding: 1em;
+}
+.pt-2 {
+    padding-top: 2em;
+}
+.fw-b {
     font-weight: bold;
 }
-.bottom {
-    margin-top: 5vh !important;
+.pb-1 {
+    padding-bottom: 1em;
+}
+.br-5 {
+    border-radius: 5px;
+}
+
+
+
+div.card {
+    box-shadow: none;
+    border-bottom: 4px solid #d6d6d6;
+    border-radius: 5px;
+}
+div.card div.card-image img {
+    border-radius: 5px;
+    box-shadow: 0 4px 2px -2px gray;
+}
+div.card span.card-title.card-overtitle {
+    padding-bottom: 30px !important;
+}
+div.card span.card-title.card-subtitle {
+    font-size: 15px;
+    padding-bottom: 11px;
+}
+
+
+ul.collection {
+    border-color: transparent !important;
+}
+ul.collection li.collection-item {
+    border-bottom: 2px solid #d6d6d6 !important;
+    min-height: 0 !important;
+}
+ul.collection li.collection-item.song {
+    overflow: auto;
+    padding-left: 0;
+}
+ul.collection li.collection-item.song img {
+    position: relative !important;
+    border-radius: 2px;
+}
+ul.collection li.collection-item.song p {
+    display: inline-block;
+    margin-left: 1.5em;
+    font-size: 17px;
+    padding: 0.3em;
+}
+ul.collection li.collection-item.song p:first-child {
+    font-weight: bold;
+}
+ul.collection li.collection-item.song a.btn {
+    margin: .5em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+ul.collection li.collection-item.profile {
+    border-bottom: 0 !important;;
 }

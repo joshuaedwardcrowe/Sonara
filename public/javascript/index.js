@@ -1,146 +1,43 @@
 const Vue = require('vue/dist/vue.js');
 const Vuegister = require('vuegister');
+const Twas = require('twas')
 
 // Handles single-file component registry
 Vuegister.register();
 
 const BarComponent = require('./components/layout/Bar.vue');
+const BarButtonComponent = require('./components/layout/BarButton.vue');
+const ConnectionIconComponent = require('./components/layout/ConnectionIcon.vue');
+const ListenersIconComponent = require('./components/layout/ListenersIcon.vue');
 const PageComponent = require('./components/layout/Page.vue');
-const ProfileComponent = require('./components/queue/Profile.vue');
-const ProfileUserComponent = require('./components/queue/ProfileUser.vue');
-const ProfileNotificationComponent = require('./components/queue/ProfileNotification.vue');
-const SongComponent = require('./components/song/Song.vue');
-const SongOverviewComponent = require('./components/song/SongOverview.vue');
+const PageColumnComponent = require('./components/layout/PageColumn.vue');
+
+const NotificationListComponent = require('./components/user/NotificationList.vue');
+const NotificationComponent = require('./components/user/Notification.vue');
 
 window.SonaraApp = new Vue({
   el: '#sonara-app',
   components: {
     Bar: BarComponent,
+    BarButton: BarButtonComponent,
+
+    ConnectionIcon: ConnectionIconComponent, 
+    ListenersIcon: ListenersIconComponent,
+
     Page: PageComponent,
-    Profile: ProfileComponent,
-    ProfileUser: ProfileUserComponent,
-    ProfileNotification: ProfileNotificationComponent,
-    Song: SongComponent,
-    SongOverview: SongOverviewComponent
+    PageColumn: PageColumnComponent,
+
+    NotificationList: NotificationListComponent,
+    Notification: NotificationComponent
   },
   mounted: function () {
-    // establishOverviewTabs();
-    establishStatusButton();
-
-    console.log("Loaded.")
+    console.log(`Vue mounted.`)
   },
-  data: {
-    currentUser: {
-      avatarUrl: './images/person.png',
-      name: 'John Smith',
-      points: 2000
-    },
-    currentNotifications: [
-      {
-        id: 1,
-        icon: 'arrow_forward',
-        description: 'Rewarded 20 Points',
-        user: {
-          avatarUrl: './images/person.png',
-          name: 'John Smith',
-          points: 2000
-        }
-      },
-      {
-        id: 2,
-        icon: 'arrow_forward',
-        description: 'Played a Song',
-        specifics: 'The Shadows - Foot Tapper',
-        user: {
-          avatarUrl: './images/person.png',
-          name: 'John Smith',
-          points: 2000
-        }
-      }
-    ],
-    currentSongs: [
-      {
-        id: 1,
-        artist: 'Drake',
-        name: 'In My Feelings',
-        rating: {
-          likes: 223,
-          dislikes: 1
-        },
-        progress: 100,
-        albumCover: './images/album.jpg'
-      },
-      {
-        id: 2,
-        artist: 'Drake',
-        name: 'Hotline Bling',
-        rating: {
-          likes: 223,
-          dislikes: 1
-        },
-        progress: 44,
-        albumCover: './images/album.jpg'
-      },
-      {
-        id: 3,
-        artist: 'Drake',
-        name: 'Controlla',
-        rating: {
-          likes: 223,
-          dislikes: 1
-        },
-        progress: 21,
-        albumCover: './images/album.jpg'
-      }
-    ],
-    currentIntegrations: [
-      {
-        id: 1,
-        image: './images/spotify.png',
-        name: 'Spotify',
-        connected: new Date()
-      }
-    ],
-    currentDevices: []
-  },
-  computed: {
-    chunkedIntegrations: function () {
-      const chunkedIntegrations = [];
-      let chunkIndex = 0;
-
-      while (chunkIndex < this.currentIntegrations.length) {
-        chunkedIntegrations.push(this.currentIntegrations.slice(chunkIndex, chunkIndex += 3))
-      }
-
-      return chunkedIntegrations;
-    }
-  }
 });
 
-function getChildElementByClassName($parentElement, childClassName) {
-  const $childElementPossibilities = $parentElement.getElementsByClassName(childClassName)
-  return $childElementPossibilities[0];
-}
 
-function establishOverviewTabs() {
-  const $tabsContainer = document.getElementById('page-topshelf')
-  const $tabsList = getChildElementByClassName($tabsContainer, 'tabs');
-  const tabItemsCollection = $tabsList.getElementsByClassName('tab');
-  const tabItems = [].slice.call(tabItemsCollection);
-  const tabAnchorsCollection = $tabsList.getElementsByTagName('a');
-  const tabAnchors = [].slice.call(tabAnchorsCollection);
 
-  tabItems.forEach($tabItem => $tabItem.onclick = (e) => e.preventDefault());
-
-  window.Tabs = M.Tabs.init($tabsList, {});
-  const Reference = tabAnchors[2].href;
-  const Id = Reference.substring(Reference.indexOf("#") + 1, Reference.length);
-
-  Tabs.select(Id);
-  Tabs.updateTabIndicator();
-}
-
-function establishStatusButton() {
-  const $buttonContainer = Array.from(document.getElementsByClassName('fixed-action-btn'));
-  const FloatingActionButton = $buttonContainer.map(x => M.FloatingActionButton.init(x, {}));
-}
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.tooltipped');
+  var instances = M.Tooltip.init(elems, {});
+});
