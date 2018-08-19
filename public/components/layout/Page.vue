@@ -1,5 +1,5 @@
 <template>
-    <div id="page" class="row grey  mt-1 lighten-3">
+    <div id="page" class="row mt-1 grey lighten-3">
         <slot></slot>
     </div>
 </template>

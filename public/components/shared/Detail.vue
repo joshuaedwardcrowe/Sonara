@@ -1,7 +1,7 @@
 <template>
     <div class="modal">
-        <div class="modal-content">
-            <h4>Modal Header</h4>
+        <div class="modal-content grey lighten-3">
+            <h4>{{title}}</h4>
             <slot name="content"></slot>
         </div>
         <div class="modal-footer">
@@ -18,6 +18,7 @@
 
         console.log("Detail component mounted.");
       },
+      props: {title: String},
       data: () => {
         return {
           uiInstance: null

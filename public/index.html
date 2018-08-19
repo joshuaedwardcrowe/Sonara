@@ -21,14 +21,16 @@
           <clicker
                   label="Report a Bug"
                   background-color="white"
-                  text-color="black"
-                  icon-name="bug_report">
+                  text-color="text-darken-4 purple"
+                  icon-name="healing"
+                  icon-position="right">
           </clicker>
           <clicker
                   label="Lock the Queue"
                   background-color="white"
-                  text-color="black"
-                  icon-name="lock_outline">
+                  text-color="text-darken-4 purple"
+                  icon-name="lock_outline"
+                  icon-position="right">
           </clicker>
       </bar>
       <page>
@@ -115,14 +117,26 @@
           </page-column>
       </page>
 
-      <detail ref="detailModal">
+      <detail ref="detailModal" title="Drake - Hotline Bling">
           <clicker
                   slot="buttons"
-                  label="Lock the Queue"
+                  label="Close"
+                  v-bind:flat="true"
+                  position="right"
                   background-color="white"
                   text-color="black"
-                  icon-name="lock_outline"
+                  icon-name="clear"
                   icon-position="right">
+          </clicker>
+          <clicker
+                  slot="buttons"
+                  v-bind:flat="true"
+                  label="Get Song Link"
+                  position="left"
+                  background-color="white"
+                  text-color="black"
+                  icon-name="insert_link"
+                  icon-position="left">
           </clicker>
       </detail>
   </div>
