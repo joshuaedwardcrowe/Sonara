@@ -25,13 +25,7 @@
           <page-column v-bind:size="2" v-bind:shadowed="true">
 
               <!-- User Profile -->
-              <ul class="collection">
-                  <li class="collection-item avatar profile mh-0 transparent ">
-                      <img src="images/person.png" alt="" class="circle">
-                      <span class="title">Joshua Crowe</span>
-                      <p class="grey-text">23,0000 Points</p>
-                  </li>
-              </ul>
+              <profile v-bind:user="currentUser"></profile>
               <notification-list>
                   <notification></notification>
               </notification-list>

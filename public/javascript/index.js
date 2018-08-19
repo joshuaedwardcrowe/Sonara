@@ -12,6 +12,7 @@ const ListenersIconComponent = require('./components/layout/ListenersIcon.vue');
 const PageComponent = require('./components/layout/Page.vue');
 const PageColumnComponent = require('./components/layout/PageColumn.vue');
 
+const ProfileComponent = require('./components/user/Profile.vue');
 const NotificationListComponent = require('./components/user/NotificationList.vue');
 const NotificationComponent = require('./components/user/Notification.vue');
 
@@ -27,12 +28,20 @@ window.SonaraApp = new Vue({
     Page: PageComponent,
     PageColumn: PageColumnComponent,
 
+    Profile: ProfileComponent,
     NotificationList: NotificationListComponent,
     Notification: NotificationComponent
   },
   mounted: function () {
     console.log(`Vue mounted.`)
   },
+  data: {
+    currentUser: {
+      name: 'Joshua Crowe',
+      points: 234223,
+      imageUrl: 'images/person.png'
+    }
+  }
 });
 
 
