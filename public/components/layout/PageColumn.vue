@@ -6,13 +6,13 @@
 
 <script>
     module.exports = {
-      props: {size: Number, shadowed: Boolean},
+      props: {size: Number},
       mounted: function () {
         console.log("Page Column component mounted.");
       },
       computed: {
         columnClasses: function () {
-          return ['col', `s${this.size}`, this.shadowed ? 'grey lighten-3': '']
+          return ['col', `s${this.size}`]
         }
       }
     }
