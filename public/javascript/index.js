@@ -12,6 +12,9 @@ const ReportBugComponent = require('./components/layout/ReportBug.vue');
 const PageComponent = require('./components/layout/Page.vue');
 const PageColumnComponent = require('./components/layout/PageColumn.vue');
 
+const NotificationListComponent = require('./components/user/NotificationList.vue');
+const NotificationComponent = require('./components/user/Notification.vue');
+
 window.SonaraApp = new Vue({
   el: '#sonara-app',
   components: {
@@ -20,9 +23,19 @@ window.SonaraApp = new Vue({
     ListenersIcon: ListenersIconComponent,
     ReportBug: ReportBugComponent,
     Page: PageComponent,
-    PageColumn: PageColumnComponent
+    PageColumn: PageColumnComponent,
+
+    NotificationList: NotificationListComponent,
+    Notification: NotificationComponent
   },
   mounted: function () {
     console.log(`Vue mounted.`)
   },
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.tooltipped');
+  var instances = M.Tooltip.init(elems, {});
 });

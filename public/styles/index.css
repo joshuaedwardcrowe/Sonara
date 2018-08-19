@@ -27,6 +27,77 @@ div.navbar-fixed nav .nav-wrapper a.brand-logo p {
     font-family: 'Overpass Mono';
 }
 
-#page .col {
+#page > .col {
     height: calc(100vh - 50px);
+}
+
+
+.m-0 {
+    margin: 0 !important;
+}
+.mt-1 {
+    margin-top: 1em;
+}
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+.p-1 {
+    padding: 1em;
+}
+.pt-1 {
+    padding: 1em;
+}
+.pt-2 {
+    padding-top: 2em;
+}
+.fw-b {
+    font-weight: bold;
+}
+.pb-1 {
+    padding-bottom: 1em;
+}
+.br-5 {
+    border-radius: 5px;
+}
+
+
+
+div.card {
+    box-shadow: none;
+    border-bottom: 4px solid #d6d6d6;
+    border-radius: 5px;
+}
+
+
+ul.collection {
+    border-color: transparent !important;
+}
+ul.collection li.collection-item {
+    border-bottom: 2px solid #d6d6d6 !important;
+    min-height: 0 !important;
+}
+ul.collection li.collection-item.song {
+    overflow: auto;
+    padding-left: 0;
+}
+ul.collection li.collection-item.song img {
+    position: relative !important;
+    border-radius: 2px;
+}
+ul.collection li.collection-item.song p {
+    display: inline-block;
+    margin-left: 1.5em;
+    font-size: 17px;
+    padding: 0.3em;
+}
+ul.collection li.collection-item.song p:first-child {
+    font-weight: bold;
+}
+ul.collection li.collection-item.song a.btn {
+    margin: .5em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+ul.collection li.collection-item.profile {
+    border-bottom: 0 !important;;
 }

@@ -1,8 +1,8 @@
 {
-  "name": "Squadron",
+  "name": "sonara",
   "version": "1.0.0",
   "description": "Matchmaking world-wide.",
-  "main": "squadron.js",
+  "main": "sonara.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

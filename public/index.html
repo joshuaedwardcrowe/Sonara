@@ -21,9 +21,58 @@
           <report-bug report-url="https://google.com"></report-bug>
       </bar>
       <page>
-          <page-column v-bind:size="2" v-bind:shadowed="true"></page-column>
-          <page-column v-bind:size="7" v-bind:shadowed="false"></page-column>
-          <page-column v-bind:size="3" v-bind:shadowed="true"></page-column>
+          <page-column v-bind:size="2" v-bind:shadowed="true">
+
+              <!-- User Profile -->
+              <ul class="collection">
+                  <li class="collection-item avatar profile mh-0 transparent ">
+                      <img src="images/person.png" alt="" class="circle">
+                      <span class="title">Joshua Crowe</span>
+                      <p class="grey-text">23,0000 Points</p>
+                  </li>
+              </ul>
+              <notification-list>
+                  <notification></notification>
+              </notification-list>
+
+          </page-column>
+          <page-column v-bind:size="7" v-bind:shadowed="false">
+
+              <ul class="collection">
+                  <li class="collection-item avatar song mh-0 br-5 bs">
+                      <p>#1</p>
+                      <p>Journey - Don't Stop Believing</p>
+                      <a class="waves-effect waves-dark btn-flat right tooltipped"
+                         data-position="bottom" data-tooltip="Remove from Queue">
+                          <i class="material-icons center">clear</i>
+                      </a>
+                      <a class="waves-effect waves-dark btn-flat right tooltipped"
+                            data-position="bottom" data-tooltip="About this Song">
+                          <i class="material-icons center">more_vert</i>
+                      </a>
+                      <a class="waves-effect waves-dark btn right white black-text tooltipped"
+                         data-position="bottom" data-tooltip="Upvote">
+                          <i class="material-icons center green-text">arrow_upward</i>
+                      </a>
+                      <a class="waves-effect waves-dark btn right white black-text tooltipped"
+                         data-position="bottom" data-tooltip="Downvote">
+                          <i class="material-icons center red-text">arrow_downward</i>
+                      </a>
+                  </li>
+              </ul>
+
+          </page-column>
+          <page-column v-bind:size="3" v-bind:shadowed="true">
+
+              <div class="card white bs">
+                  <div class="card-content black-text">
+                      <span class="card-title">Card Title</span>
+                      <p>I am a very simple card. I am good at containing small bits of information.
+                          I am convenient because I require little markup to use effectively.</p>
+                  </div>
+              </div>
+
+          </page-column>
       </page>
   </div>
 
