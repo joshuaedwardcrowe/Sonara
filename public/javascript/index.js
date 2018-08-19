@@ -6,30 +6,29 @@ const Twas = require('twas')
 Vuegister.register();
 
 const BarComponent = require('./components/layout/Bar.vue');
-const BarButtonComponent = require('./components/layout/BarButton.vue');
 const ConnectionIconComponent = require('./components/layout/ConnectionIcon.vue');
 const ListenersIconComponent = require('./components/layout/ListenersIcon.vue');
 const PageComponent = require('./components/layout/Page.vue');
 const PageColumnComponent = require('./components/layout/PageColumn.vue');
 
+const ClickerComponent = require('./components/shared/Clicker.vue');
+const ListComponent = require('./components/shared/List.vue');
 const ProfileComponent = require('./components/user/Profile.vue');
-const NotificationListComponent = require('./components/user/NotificationList.vue');
 const NotificationComponent = require('./components/user/Notification.vue');
 
 window.SonaraApp = new Vue({
   el: '#sonara-app',
   components: {
     Bar: BarComponent,
-    BarButton: BarButtonComponent,
+    Clicker: ClickerComponent,
 
     ConnectionIcon: ConnectionIconComponent, 
     ListenersIcon: ListenersIconComponent,
 
     Page: PageComponent,
     PageColumn: PageColumnComponent,
-
+    List: ListComponent,
     Profile: ProfileComponent,
-    NotificationList: NotificationListComponent,
     Notification: NotificationComponent
   },
   mounted: function () {
