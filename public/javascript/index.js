@@ -13,6 +13,7 @@ const PageColumnComponent = require('./components/layout/PageColumn.vue');
 
 const ClickerComponent = require('./components/shared/Clicker.vue');
 const ListComponent = require('./components/shared/List.vue');
+const DetailComponent = require('./components/shared/Detail.vue');
 const ProfileComponent = require('./components/user/Profile.vue');
 const NotificationComponent = require('./components/user/Notification.vue');
 const SongComponent = require('./components/songs/Song.vue');
@@ -29,6 +30,7 @@ window.SonaraApp = new Vue({
     Page: PageComponent,
     PageColumn: PageColumnComponent,
     List: ListComponent,
+    Detail: DetailComponent,
     Profile: ProfileComponent,
     Notification: NotificationComponent,
     Song: SongComponent
@@ -49,6 +51,11 @@ window.SonaraApp = new Vue({
         name: "God's Plan"
       }
     ]
+  },
+  methods: {
+    openDetailModal: function () {
+      this.$refs.detailModal.open()
+    }
   }
 });
 

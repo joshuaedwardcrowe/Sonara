@@ -1,5 +1,5 @@
 <template>
-    <a v-bind:class="buttonClasses"
+    <a v-bind:class="buttonClasses" v-on:click="click"
        v-bind:data-position="buttonPosition" v-bind:data-tooltip="tooltip">
         {{label}} <i v-bind:class="iconClasses">{{iconName}}</i>
     </a>
@@ -72,6 +72,11 @@
         },
         iconClasses: function () {
           return ['material-icons', this.iconPosition]
+        }
+      },
+      methods: {
+        click: function () {
+          this.$emit('click');
         }
       }
     }
