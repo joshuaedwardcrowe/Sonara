@@ -17,6 +17,7 @@ const DetailComponent = require('./components/shared/Detail.vue');
 const ProfileComponent = require('./components/user/Profile.vue');
 const NotificationComponent = require('./components/user/Notification.vue');
 const SongComponent = require('./components/songs/Song.vue');
+const SongOverviewComponent = require('./components/songs/SongOverview.vue');
 
 window.SonaraApp = new Vue({
   el: '#sonara-app',
@@ -33,7 +34,8 @@ window.SonaraApp = new Vue({
     Detail: DetailComponent,
     Profile: ProfileComponent,
     Notification: NotificationComponent,
-    Song: SongComponent
+    Song: SongComponent,
+    SongOverview: SongOverviewComponent
   },
   mounted: function () {
     console.log(`Vue mounted.`)
