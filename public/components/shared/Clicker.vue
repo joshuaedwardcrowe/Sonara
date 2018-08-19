@@ -16,17 +16,22 @@
           default: false
         },
         label: {
-          type: String
+          type: String,
+          default: ''
         },
         tooltip: {
           type: String
+        },
+        position: {
+          type: String,
+          default: 'center'
         },
         iconName: {
           type: String
         },
         iconPosition: {
           type: String,
-          default: 'right'
+          default: 'center'
         },
         textColor: {
           type: String,
@@ -56,6 +61,7 @@
           return [
              ...this.standardClasses,
             this.backgroundColor,
+            this.position,
             this.buttonTextClass,
             this.buttonFlatnessClass,
             this.buttonTooltipClass

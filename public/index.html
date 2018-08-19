@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <!-- TODO: Find a way to have these locally. -->
+  <!-- TODO: Find currentSong way to have these locally. -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Overpass+Mono|Fira+Mono" rel="stylesheet">
   <link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css">
   <link rel="stylesheet" href="styles/index.css" />
@@ -44,7 +44,31 @@
           <page-column v-bind:size="7" v-bind:shadowed="false">
 
               <list>
-
+                <song
+                        v-for="(currentSong, currentSongIndex) in currentSongs"
+                        v-bind:index="currentSongIndex"
+                        v-bind:song="currentSong">
+                    <clicker
+                            v-bind:flat="true"
+                            icon-name="clear"
+                            position="right">
+                    </clicker>
+                    <clicker
+                            v-bind:flat="true"
+                            icon-name="more_vert"
+                            position="right">
+                    </clicker>
+                    <clicker
+                            text-color="red"
+                            icon-name="arrow_downward"
+                            position="right">
+                    </clicker>
+                    <clicker
+                            text-color="green"
+                            icon-name="arrow_upward"
+                            position="right">
+                    </clicker>
+                </song>
               </list>
 
           </page-column>

@@ -15,6 +15,7 @@ const ClickerComponent = require('./components/shared/Clicker.vue');
 const ListComponent = require('./components/shared/List.vue');
 const ProfileComponent = require('./components/user/Profile.vue');
 const NotificationComponent = require('./components/user/Notification.vue');
+const SongComponent = require('./components/songs/Song.vue');
 
 window.SonaraApp = new Vue({
   el: '#sonara-app',
@@ -29,7 +30,8 @@ window.SonaraApp = new Vue({
     PageColumn: PageColumnComponent,
     List: ListComponent,
     Profile: ProfileComponent,
-    Notification: NotificationComponent
+    Notification: NotificationComponent,
+    Song: SongComponent
   },
   mounted: function () {
     console.log(`Vue mounted.`)
@@ -39,7 +41,14 @@ window.SonaraApp = new Vue({
       name: 'Joshua Crowe',
       points: 234223,
       imageUrl: 'images/person.png'
-    }
+    },
+    currentSongs: [
+      {
+        id: "amoamos-ansoaso-ansoaso-amsoamso",
+        artist: 'Drake',
+        name: "God's Plan"
+      }
+    ]
   }
 });
 
