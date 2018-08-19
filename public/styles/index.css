@@ -67,6 +67,17 @@ div.card {
     border-bottom: 4px solid #d6d6d6;
     border-radius: 5px;
 }
+div.card div.card-image img {
+    border-radius: 5px;
+    box-shadow: 0 4px 2px -2px gray;
+}
+div.card span.card-title.card-overtitle {
+    padding-bottom: 30px !important;
+}
+div.card span.card-title.card-subtitle {
+    font-size: 15px;
+    padding-bottom: 11px;
+}
 
 
 ul.collection {

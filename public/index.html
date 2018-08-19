@@ -64,11 +64,39 @@
           </page-column>
           <page-column v-bind:size="3" v-bind:shadowed="true">
 
-              <div class="card white bs">
-                  <div class="card-content black-text">
-                      <span class="card-title">Card Title</span>
-                      <p>I am a very simple card. I am good at containing small bits of information.
-                          I am convenient because I require little markup to use effectively.</p>
+              <div class="card">
+                  <div class="card-image">
+                      <img src="images/album.jpg">
+                      <span class="card-title card-overtitle">Hotline Bling</span>
+                      <span class="card-title card-subtitle">Drake</span>
+                  </div>
+                  <div class="card-content">
+                      <div class="progress grey lighten-4">
+                          <div class="determinate purple darken-4" style="width: 70%"></div>
+                      </div>
+                      <div class="row">
+                          <div class="col s2">0:22</div>
+                          <div class="col s2 offset-s8">3:49</div>
+                      </div>
+                      <div class="row">
+                          <div class="col s12 center-align">
+                              <a class="btn-floating btn-large waves-effect waves-light purple darken-4"><i class="material-icons">fast_rewind</i></a>
+                              <a class="btn-floating btn-large waves-effect waves-light purple darken-4"><i class="material-icons">pause</i></a>
+                              <a class="btn-floating btn-large waves-effect waves-light purple darken-4"><i class="material-icons">fast_forward</i></a>
+                          </div>
+                      </div>
+                      <div class="p-1"></div>
+                      <div class="row">
+                          <div class="col s12 center-align">
+                              <a class="waves-effect waves-dark btn white red-text"><i class="material-icons left">arrow_downward</i>22,000</a>
+                              <a class="waves-effect waves-dark btn white green-text"><i class="material-icons right">arrow_upward</i>22,000</a>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col s12 center-align">
+                              <p class="bottom">&copy; Something Records 2018</p>
+                          </div>
+                      </div>
                   </div>
               </div>
 

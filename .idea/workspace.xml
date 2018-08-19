@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd25d4ec-a1e2-4fa3-8735-f5951d3fbf0e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/components/user/Notification.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/components/user/NotificationList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/components/layout/Page.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/components/layout/Page.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/components/layout/PageColumn.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/components/layout/PageColumn.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/components/user/Notification.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/components/user/Notification.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascript/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascript/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/styles/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/squadron.js" beforeDir="false" afterPath="$PROJECT_DIR$/sonara.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -85,7 +78,7 @@
           <entry key="js" value="19" />
           <entry key="json" value="3" />
           <entry key="txt" value="1" />
-          <entry key="vue" value="83" />
+          <entry key="vue" value="84" />
           <entry key="xsl" value="1" />
         </counts>
       </usages-collector>
@@ -96,26 +89,26 @@
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="19" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Vue.js" value="83" />
+          <entry key="Vue.js" value="84" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="2907" />
-          <entry key="html" value="5536" />
+          <entry key="css" value="3168" />
+          <entry key="html" value="5768" />
           <entry key="js" value="7111" />
           <entry key="json" value="18" />
-          <entry key="vue" value="13683" />
+          <entry key="vue" value="13772" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="2907" />
-          <entry key="HTML" value="5536" />
+          <entry key="CSS" value="3168" />
+          <entry key="HTML" value="5768" />
           <entry key="JSON" value="18" />
           <entry key="JavaScript" value="7111" />
-          <entry key="Vue.js" value="13683" />
+          <entry key="Vue.js" value="13772" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -131,26 +124,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="45" column="81" lean-forward="true" selection-start-line="45" selection-start-column="81" selection-end-line="45" selection-end-column="81" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/components/user/NotificationList.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="3" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/components/user/Notification.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" selection-start-line="1" selection-end-line="5" selection-end-column="9" />
+            <state relative-caret-position="308">
+              <caret line="83" column="136" selection-start-line="83" selection-start-column="136" selection-end-line="83" selection-end-column="136" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#page-column#2;n#page#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#4187#4193#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -167,8 +146,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/styles/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="93" column="22" selection-start-line="93" selection-start-column="22" selection-end-line="93" selection-end-column="22" />
+            <state relative-caret-position="423">
+              <caret line="78" column="22" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -178,6 +157,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="538">
               <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/components/layout/Bar.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -271,8 +259,8 @@
         <option value="$PROJECT_DIR$/public/components/layout/Page.vue" />
         <option value="$PROJECT_DIR$/public/components/Notification.vue" />
         <option value="$PROJECT_DIR$/public/components/NotificationList.vue" />
-        <option value="$PROJECT_DIR$/public/components/user/Notification.vue" />
         <option value="$PROJECT_DIR$/public/javascript/index.js" />
+        <option value="$PROJECT_DIR$/public/components/user/Notification.vue" />
         <option value="$PROJECT_DIR$/public/styles/index.css" />
         <option value="$PROJECT_DIR$/public/index.html" />
       </list>
@@ -425,12 +413,12 @@
       <workItem from="1534494922090" duration="13746000" />
       <workItem from="1534544594640" duration="916000" />
       <workItem from="1534618323451" duration="1453000" />
-      <workItem from="1534679085762" duration="9167000" />
+      <workItem from="1534679085762" duration="11560000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93381000" />
+    <option name="totallyTimeSpent" value="95774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -528,13 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/components/layout/Bar.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/components/layout/ReportBug.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -563,17 +544,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/components/user/Notification.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/components/user/NotificationList.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/components/user/Notification.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" selection-start-line="1" selection-end-line="5" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -586,15 +567,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/styles/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="93" column="22" selection-start-line="93" selection-start-column="22" selection-end-line="93" selection-end-column="22" />
+        <state relative-caret-position="423">
+          <caret line="78" column="22" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/components/layout/Bar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="45" column="81" lean-forward="true" selection-start-line="45" selection-start-column="81" selection-end-line="45" selection-end-column="81" />
+        <state relative-caret-position="308">
+          <caret line="83" column="136" selection-start-line="83" selection-start-column="136" selection-end-line="83" selection-end-column="136" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#page-column#2;n#page#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#4187#4193#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
