@@ -2,111 +2,109 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <!-- TODO: Find a way to have these locally. -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Overpass+Mono|Fira+Mono" rel="stylesheet">
-  <link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css">
-  <link rel="stylesheet" href="styles/index.css" />
-  <title>Sonara</title>
+    <meta charset="UTF-8">
+    <!-- TODO: Find a way to have these locally. -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Overpass+Mono|Fira+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>Sonara</title>
 </head>
 
 <body class="grey lighten-4">
-  <div id="sonara-app">
-      <bar>
-          <connection-icon
-                  connection-status="Connected"
-                  device-name="Sonos One">
-          </connection-icon>
-          <listeners-icon v-bind:count="11"></listeners-icon>
-          <bar-button url="#" label="Report a Bug" icon="bug_report"></bar-button>
-          <bar-button url="#" label="Lock Queue" icon="lock_outline"></bar-button>
-      </bar>
-      <page>
-          <page-column v-bind:size="2" v-bind:shadowed="true">
+    <div id="sonara-app">
+        <bar>
+            <connection-icon connection-status="Connected" device-name="Sonos One">
+            </connection-icon>
+            <listeners-icon v-bind:count="11"></listeners-icon>
+            <bar-button url="#" label="Report a Bug" icon="bug_report"></bar-button>
+            <bar-button url="#" label="Lock Queue" icon="lock_outline"></bar-button>
+        </bar>
+        <page>
+            <page-column v-bind:size="2" v-bind:shadowed="true">
 
-              <!-- User Profile -->
-              <ul class="collection">
-                  <li class="collection-item avatar profile mh-0 transparent ">
-                      <img src="images/person.png" alt="" class="circle">
-                      <span class="title">Joshua Crowe</span>
-                      <p class="grey-text">23,0000 Points</p>
-                  </li>
-              </ul>
-              <notification-list>
-                  <notification></notification>
-              </notification-list>
+                <!-- User Profile -->
+                <ul class="collection">
+                    <li class="collection-item avatar profile mh-0 transparent ">
+                        <img src="images/person.png" alt="" class="circle">
+                        <span class="title">John Smith</span>
+                        <p class="grey-text">23,0000 Points</p>
+                    </li>
+                </ul>
+                <notification-list>
+                    <notification></notification>
+                </notification-list>
 
-          </page-column>
-          <page-column v-bind:size="7" v-bind:shadowed="false">
+            </page-column>
+            <page-column v-bind:size="7" v-bind:shadowed="false">
 
-              <ul class="collection">
-                  <li class="collection-item avatar song mh-0 br-5 bs">
-                      <p>#1</p>
-                      <p>Journey - Don't Stop Believing</p>
-                      <a class="waves-effect waves-dark btn-flat right tooltipped"
-                         data-position="bottom" data-tooltip="Remove from Queue">
-                          <i class="material-icons center">clear</i>
-                      </a>
-                      <a class="waves-effect waves-dark btn-flat right tooltipped"
-                            data-position="bottom" data-tooltip="About this Song">
-                          <i class="material-icons center">more_vert</i>
-                      </a>
-                      <a class="waves-effect waves-dark btn right white black-text tooltipped"
-                         data-position="bottom" data-tooltip="Upvote">
-                          <i class="material-icons center green-text">arrow_upward</i>
-                      </a>
-                      <a class="waves-effect waves-dark btn right white black-text tooltipped"
-                         data-position="bottom" data-tooltip="Downvote">
-                          <i class="material-icons center red-text">arrow_downward</i>
-                      </a>
-                  </li>
-              </ul>
+                <ul class="collection">
+                    <li class="collection-item avatar song mh-0 br-5 bs">
+                        <p>#1</p>
+                        <p>Journey - Don't Stop Believing</p>
+                        <a class="waves-effect waves-dark btn-flat right tooltipped" data-position="bottom"
+                            data-tooltip="Remove from Queue">
+                            <i class="material-icons center">clear</i>
+                        </a>
+                        <a class="waves-effect waves-dark btn-flat right tooltipped" data-position="bottom"
+                            data-tooltip="About this Song">
+                            <i class="material-icons center">more_vert</i>
+                        </a>
+                        <a class="waves-effect waves-dark btn right white black-text tooltipped" data-position="bottom"
+                            data-tooltip="Upvote">
+                            <i class="material-icons center green-text">arrow_upward</i>
+                        </a>
+                        <a class="waves-effect waves-dark btn right white black-text tooltipped" data-position="bottom"
+                            data-tooltip="Downvote">
+                            <i class="material-icons center red-text">arrow_downward</i>
+                        </a>
+                    </li>
+                </ul>
 
-          </page-column>
-          <page-column v-bind:size="3" v-bind:shadowed="true">
+            </page-column>
+            <page-column v-bind:size="3" v-bind:shadowed="true">
 
-              <div class="card">
-                  <div class="card-image">
-                      <img src="images/album.jpg">
-                      <span class="card-title card-overtitle">Hotline Bling</span>
-                      <span class="card-title card-subtitle">Drake</span>
-                  </div>
-                  <div class="card-content">
-                      <div class="progress grey lighten-4">
-                          <div class="determinate purple darken-4" style="width: 70%"></div>
-                      </div>
-                      <div class="row">
-                          <div class="col s2">0:22</div>
-                          <div class="col s2 offset-s8">3:49</div>
-                      </div>
-                      <div class="row">
-                          <div class="col s12 center-align">
-                              <a class="btn-floating btn-large waves-effect waves-light purple darken-4"><i class="material-icons">fast_rewind</i></a>
-                              <a class="btn-floating btn-large waves-effect waves-light purple darken-4"><i class="material-icons">pause</i></a>
-                              <a class="btn-floating btn-large waves-effect waves-light purple darken-4"><i class="material-icons">fast_forward</i></a>
-                          </div>
-                      </div>
-                      <div class="p-1"></div>
-                      <div class="row">
-                          <div class="col s12 center-align">
-                              <a class="waves-effect waves-dark btn white red-text"><i class="material-icons left">arrow_downward</i>22,000</a>
-                              <a class="waves-effect waves-dark btn white green-text"><i class="material-icons right">arrow_upward</i>22,000</a>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col s12 center-align">
-                              <p class="bottom">&copy; Something Records 2018</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/album.jpg">
+                        <span class="card-title card-overtitle">Hotline Bling</span>
+                        <span class="card-title card-subtitle">Drake</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="progress grey lighten-4">
+                            <div class="determinate purple darken-4" style="width: 70%"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col s2">0:22</div>
+                            <div class="col s2 offset-s8">3:49</div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 center-align">
+                                <a class="btn-floating btn-large waves-effect waves-light purple darken-4"><i class="material-icons">fast_rewind</i></a>
+                                <a class="btn-floating btn-large waves-effect waves-light purple darken-4"><i class="material-icons">pause</i></a>
+                                <a class="btn-floating btn-large waves-effect waves-light purple darken-4"><i class="material-icons">fast_forward</i></a>
+                            </div>
+                        </div>
+                        <div class="p-1"></div>
+                        <div class="row">
+                            <div class="col s12 center-align">
+                                <a class="waves-effect waves-dark btn white red-text"><i class="material-icons left">arrow_downward</i>22,000</a>
+                                <a class="waves-effect waves-dark btn white green-text"><i class="material-icons right">arrow_upward</i>22,000</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 center-align">
+                                <p class="bottom">&copy; Something Records 2018</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-          </page-column>
-      </page>
-  </div>
+            </page-column>
+        </page>
+    </div>
 
-  <script src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
-  <script src="./javascript/index.js"></script>
+    <script src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script src="./javascript/index.js"></script>
 
 </body>
 
