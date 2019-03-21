@@ -8,10 +8,10 @@
 </template>
 
 <script>
+    const { log } = require('../../javascript/utils');
+
     module.exports = {
       props: {count: Number},
-      mounted: function () {
-        console.log("Listeners Icon component mounted.");
-      }
+      mounted: () => log('ListenersIcon', 'Mounted.')
     }
 </script>

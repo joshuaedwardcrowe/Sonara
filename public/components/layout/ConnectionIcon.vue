@@ -8,11 +8,11 @@
 </template>
 
 <script>
+    const { log } = require('../../javascript/utils');
+
     module.exports = {
       props: {connectionStatus: String, deviceName: String},
-      mounted: function () {
-        console.log("Connection Icon component mounted.")
-      },
+      mounted: () => log('ConnectionIcon', 'Mounted'),
       computed: {
         connectionIcon: function () {
           switch (this.connectionStatus) {

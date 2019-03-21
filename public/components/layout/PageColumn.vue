@@ -5,11 +5,11 @@
 </template>
 
 <script>
+    const { log } = require('../../javascript/utils');
+
     module.exports = {
       props: {size: Number},
-      mounted: function () {
-        console.log("Page Column component mounted.");
-      },
+      mounted: () => log('PageColumn', 'Mounted'),
       computed: {
         columnClasses: function () {
           return ['col', `s${this.size}`]

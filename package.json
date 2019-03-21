@@ -1,10 +1,10 @@
 {
   "name": "sonara",
   "version": "1.0.0",
-  "description": "Matchmaking world-wide.",
+  "description": "DJ together",
   "main": "sonara.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -16,13 +16,12 @@
   "bugs": {
     "url": "https://github.com/Gallink/Squadron/issues"
   },
-  "homepage": "https://github.com/Gallink/Squadron#readme",
+  "homepage": "https://gthub.com/Gallink/Squadron#readme",
   "dependencies": {
-    "electron": "^2.0.6",
+    "electron": "^4.1.0",
     "materialize-css": "^1.0.0-rc.2",
-    "npm": "^6.4.0",
-    "twas": "^2.0.1",
-    "vue": "^2.5.17",
+    "vue": "^2.6.10",
     "vuegister": "^0.2.2"
-  }
+  },
+  "devDependencies": {}
 }

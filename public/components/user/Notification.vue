@@ -7,5 +7,9 @@
 </template>
 
 <script>
-    module.exports = {}
+    const { log } = require('../../javascript/utils');
+
+    module.exports = {
+      mounted: () => log('Notification', 'Mounted.')
+    }
 </script>

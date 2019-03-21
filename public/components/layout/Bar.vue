@@ -14,10 +14,10 @@
     </div>
 </template>
 
-<script type="text/javascript">
+<script>
+    const { log } = require('../../javascript/utils');
+
     module.exports =  {
-      mounted: function () {
-        console.log("Bar component mounted.");
-      }
+      mounted: () => log('Bar', 'Mounted.')
     }
 </script>

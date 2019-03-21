@@ -7,14 +7,12 @@
 </template>
 
 <script>
+    const { log } = require('../../javascript/utils')
+
     module.exports = {
       props: {url: String, label: String, icon: String},
       mounted: function () {
-        console.log("Bar Button component mounted")
+        log('BarButton', 'Mounted')
       }
     }
 </script>
-
-<style scoped>
-
-</style>
